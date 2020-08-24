@@ -80,9 +80,8 @@ class RegisterController extends Controller
                 'password_confirmation' => 'required',
             ]
         );
-        $data['password']=Hash::make($data['password']);
-        //dd($data);
-        return User::create($data
-        );
+        $data['password'] = Hash::make($data['password']);
+//dd($data);
+        return User::create($data);
     }
 }
