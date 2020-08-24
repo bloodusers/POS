@@ -17,8 +17,7 @@
             color: #636b6f;
             font-family: 'Nunito', sans-serif;
             font-weight: 200;
-
-            margin: 0;
+            margin-top: 50px;
         }
 
         .full-height {
@@ -47,7 +46,6 @@
         .title {
             font-size: 84px;
         }
-
         .links > a {
             color: #636b6f;
             padding: 0 25px;
@@ -58,6 +56,7 @@
             text-transform: uppercase;
         }
 
+
         .m-b-md {
             margin-bottom: 30px;
         }
@@ -65,12 +64,13 @@
 
     <!---new -->
 
-    <link rel="icon" href="{{ asset('images/favicons/favicon.icon') }}'">
+    <!--<link rel="icon" href="{{ asset('images/favicons/favicon.icon') }}'">
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ asset('images/favicons/favicon-152.png') }}">
     <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ asset('images/favicons/favicon-120.png') }}">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('images/favicons/ favicon-72.png' )}}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('images/favicons/favicon-57.png' )}}">
-    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,600|Poppins:400,500,700' rel='stylesheet' type='text/css'>
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('images/favicons/favicon-57.png' )}}">-->
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,600|Poppins:400,500,700' rel='stylesheet'
+          type='text/css'>
 
     <!--- ICON FONT -->
     <link rel="stylesheet" href="{{ asset('assets/icons/styles.css' )}}">
@@ -81,7 +81,6 @@
     <!--- STYLESHEETS -->
     <link rel="stylesheet" href="{{ asset('css/styles.css' )}}">
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
-
 
 
     <!---new -->
@@ -102,7 +101,7 @@
 
                     <!--- LOGO -->
                     <a class="navbar-brand" href="{{route('welcome')}}">
-                        <img src="{{ asset('images/newLog.png') }}"width="50" height="50" alt="LOGO">
+                        <img src="{{ asset('images/newLog.png') }}" width="50" height="50" alt="LOGO">
                     </a>
 
                 </div>
@@ -127,12 +126,13 @@
                             </li>
                             @if (Route::has('register'))
                                 <li>
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
@@ -143,7 +143,8 @@
                                         {{ __('   Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                          style="display: none;">
                                         @csrf
                                     </form>
                                 </div>
@@ -175,7 +176,6 @@
         @yield('content')
     </main>
 </div>
-
 
 
 </body>

@@ -22,10 +22,11 @@ Route::get('/', function () {
 //Route::get('/regOrg/create', 'OrganizationController@create')->name('');
 //Route::post('companyStore', 'OrganizationController@store')->name('companyStore');
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/adminPage', 'AdminController@index')->name('adminPage');
+Route::post('/changeStatus/{user}', 'AdminController@update')->name('/changeStatus/{id}');
+
