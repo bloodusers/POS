@@ -19,14 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="adminPage+isActive&#10;done">
-      <change beforePath="$PROJECT_DIR$/.idea/POS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/POS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="Emp+Role Start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Employee.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_26_113244_create_roles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_26_113244_create_roles_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_26_114500_create_employees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_26_114500_create_employees_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +190,7 @@
       <workItem from="1598118390217" duration="2013000" />
       <workItem from="1598265899996" duration="23410000" />
       <workItem from="1598357131200" duration="3673000" />
-      <workItem from="1598440768958" duration="1556000" />
+      <workItem from="1598440768958" duration="6591000" />
     </task>
     <task id="LOCAL-00001" summary="lel">
       <created>1598268273226</created>
@@ -215,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598291331866</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Emp+Role Start">
+      <created>1598442391589</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1598442391589</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,17 +242,18 @@
     <MESSAGE value="lel" />
     <MESSAGE value="startAdminPage" />
     <MESSAGE value="adminPage+isActive&#10;done" />
-    <option name="LAST_COMMIT_MESSAGE" value="adminPage+isActive&#10;done" />
+    <MESSAGE value="Emp+Role Start" />
+    <option name="LAST_COMMIT_MESSAGE" value="Emp+Role Start" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1778" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597934752829">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1778" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1597934752829" />
-    <state x="1779" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598044515461">
+    <state x="1779" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598446092641">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1779" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598044515461" />
+    <state x="1779" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598446092641" />
     <state x="1829" y="167" key="FileChooserDialogImpl" timestamp="1598118312465">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
@@ -264,21 +270,25 @@
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1884" y="335" key="NewPhpFileDialog/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598022434665" />
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1598291333691">
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1598442393420">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598291333691" />
-    <state x="1866" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598268434370">
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598442393420" />
+    <state x="1866" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598442347169">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1866" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598268434370" />
+    <state x="1866" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598442347169" />
     <state x="-15" y="-17" width="1296" height="622" maximized="true" key="dock-window-1" timestamp="1598296349145">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="-15" y="-17" width="1296" height="622" maximized="true" key="dock-window-1/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598296349145" />
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1598357348880">
+    <state x="1759" y="11" width="578" height="801" key="find.popup" timestamp="1598453527480">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598357348880" />
+    <state x="1759" y="11" width="578" height="801" key="find.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598453527480" />
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1598453541646">
+      <screen x="1280" y="0" width="1536" height="832" />
+    </state>
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598453541646" />
   </component>
 </project>
