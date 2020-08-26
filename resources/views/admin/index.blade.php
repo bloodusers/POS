@@ -30,8 +30,8 @@
 
         <div class="col-md-8">
             <div class="card">
-                <div class="row ">
-                    <div class=" row card-header offset-2">
+                <div class="row justify-content-center">
+                    <div class=" row card-header offset-6">
                         <div class="content-area">
 
                             <table class="table table-hover content-area ">
