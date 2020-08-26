@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class Employee extends  Authenticatable
+class Employee extends Authenticatable
 {
     use Notifiable;
 
@@ -27,7 +27,7 @@ class Employee extends  Authenticatable
      ];*/
 
     protected $fillable = [
-        'name', 'email', 'password','shortName', 'contactPerson', 'contact', 'regDate',
+        'name', 'email', 'contact', 'org_id', 'role_id', 'password',
     ];
 
     /**
@@ -47,4 +47,9 @@ class Employee extends  Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function Role()
+    {
+        return $this->hasOne(Role::class);
+    }
 }
