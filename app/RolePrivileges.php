@@ -14,5 +14,4 @@ class RolePrivileges extends Model
     {
         return $this->hasMany(Role::class);
     }
-    //}
 }
