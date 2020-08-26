@@ -19,13 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="startAdminPage">
+    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="adminPage+isActive&#10;done">
+      <change beforePath="$PROJECT_DIR$/.idea/POS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/POS.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/third-party.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/third-party.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/theme.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/theme.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +144,7 @@
       <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1gJTa084TFv1VC6suAztG5eRypT" />
@@ -188,7 +190,9 @@
       <workItem from="1598022329606" duration="14339000" />
       <workItem from="1598094875698" duration="7386000" />
       <workItem from="1598118390217" duration="2013000" />
-      <workItem from="1598265899996" duration="21489000" />
+      <workItem from="1598265899996" duration="23410000" />
+      <workItem from="1598357131200" duration="3673000" />
+      <workItem from="1598440768958" duration="1556000" />
     </task>
     <task id="LOCAL-00001" summary="lel">
       <created>1598268273226</created>
@@ -204,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598270780098</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="adminPage+isActive&#10;done">
+      <created>1598291331866</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598291331866</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,11 +231,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lel" />
     <MESSAGE value="startAdminPage" />
-    <option name="LAST_COMMIT_MESSAGE" value="startAdminPage" />
+    <MESSAGE value="adminPage+isActive&#10;done" />
+    <option name="LAST_COMMIT_MESSAGE" value="adminPage+isActive&#10;done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1778" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597934752829">
@@ -251,21 +264,21 @@
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1884" y="335" key="NewPhpFileDialog/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598022434665" />
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1598270785448">
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1598291333691">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598270785448" />
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598291333691" />
     <state x="1866" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598268434370">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1866" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598268434370" />
-    <state x="-15" y="-17" width="1296" height="622" key="dock-window-1" timestamp="1598277781736">
+    <state x="-15" y="-17" width="1296" height="622" maximized="true" key="dock-window-1" timestamp="1598296349145">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="-15" y="-17" width="1296" height="622" key="dock-window-1/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598277781736" />
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1598283085294">
+    <state x="-15" y="-17" width="1296" height="622" maximized="true" key="dock-window-1/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598296349145" />
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1598357348880">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598283085294" />
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598357348880" />
   </component>
 </project>
