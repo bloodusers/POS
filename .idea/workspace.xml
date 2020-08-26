@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="relations +Privileges done">
+    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="relations +Privileges+roles done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Employee.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +187,8 @@
       <workItem from="1598118390217" duration="2013000" />
       <workItem from="1598265899996" duration="23410000" />
       <workItem from="1598357131200" duration="3673000" />
-      <workItem from="1598440768958" duration="10289000" />
+      <workItem from="1598440768958" duration="10336000" />
+      <workItem from="1598463466468" duration="1664000" />
     </task>
     <task id="LOCAL-00001" summary="lel">
       <created>1598268273226</created>
@@ -245,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598456331982</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="relations +Privileges+roles done">
+      <created>1598461198581</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1598461198582</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +278,8 @@
     <MESSAGE value="Emp+Role Start" />
     <MESSAGE value="relations +Privileges done relations +Privileges done" />
     <MESSAGE value="relations +Privileges done" />
-    <option name="LAST_COMMIT_MESSAGE" value="relations +Privileges done" />
+    <MESSAGE value="relations +Privileges+roles done" />
+    <option name="LAST_COMMIT_MESSAGE" value="relations +Privileges+roles done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1850" y="201" key="#Web_Browsers" timestamp="1598454354742">
@@ -301,10 +310,10 @@
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1884" y="335" key="NewPhpFileDialog/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598022434665" />
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1598456337994">
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1598461203257">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598456337994" />
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598461203257" />
     <state x="1866" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598442347169">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
@@ -317,9 +326,9 @@
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1759" y="11" width="578" height="801" key="find.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598453527480" />
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1598453541646">
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1598464215079">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598453541646" />
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598464215079" />
   </component>
 </project>
