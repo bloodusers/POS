@@ -19,13 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="Emp+Role Start">
+    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="relations +Privileges done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Employee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Privileges.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Privileges.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Role.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_26_114500_create_employees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_26_114500_create_employees_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_26_130044_create_privileges_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_26_130044_create_privileges_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +187,7 @@
       <workItem from="1598118390217" duration="2013000" />
       <workItem from="1598265899996" duration="23410000" />
       <workItem from="1598357131200" duration="3673000" />
-      <workItem from="1598440768958" duration="9102000" />
+      <workItem from="1598440768958" duration="10289000" />
     </task>
     <task id="LOCAL-00001" summary="lel">
       <created>1598268273226</created>
@@ -228,7 +224,28 @@
       <option name="project" value="LOCAL" />
       <updated>1598453828300</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Emp+Role Start">
+      <created>1598456272363</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1598456272363</updated>
+    </task>
+    <task id="LOCAL-00007" summary="relations +Privileges done relations +Privileges done">
+      <created>1598456305779</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1598456305779</updated>
+    </task>
+    <task id="LOCAL-00008" summary="relations +Privileges done">
+      <created>1598456331982</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1598456331982</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +268,9 @@
     <MESSAGE value="startAdminPage" />
     <MESSAGE value="adminPage+isActive&#10;done" />
     <MESSAGE value="Emp+Role Start" />
-    <option name="LAST_COMMIT_MESSAGE" value="Emp+Role Start" />
+    <MESSAGE value="relations +Privileges done relations +Privileges done" />
+    <MESSAGE value="relations +Privileges done" />
+    <option name="LAST_COMMIT_MESSAGE" value="relations +Privileges done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1850" y="201" key="#Web_Browsers" timestamp="1598454354742">
@@ -282,10 +301,10 @@
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1884" y="335" key="NewPhpFileDialog/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598022434665" />
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1598453831326">
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1598456337994">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598453831326" />
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598456337994" />
     <state x="1866" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598442347169">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>

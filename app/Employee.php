@@ -52,4 +52,8 @@ class Employee extends Authenticatable
     {
         return $this->hasOne(Role::class);
     }
+    public function User()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
