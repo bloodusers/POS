@@ -16,14 +16,14 @@ class CreateRolePrivilegesTable extends Migration
         Schema::create('role_privileges', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('role_id');
-            $table->unsignedBigInteger('privilege_id');
-            $table->boolean('canView');
-            $table->boolean('canAdd');
-            $table->boolean('canEdit');
-            $table->boolean('canDelete');
+            $table->unsignedBigInteger('privileges_id');
+            $table->boolean('canView')->default(false);
+            $table->boolean('canAdd')->default(false);
+            $table->boolean('canEdit')->default(false);
+            $table->boolean('canDelete')->default(false);
             $table->timestamps();
             $table->index('role_id');
-            $table->index('privilege_id');
+            $table->index('privileges_id');
         });
     }
 

@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class RolePrivileges extends Model
 {
-    public function Privileges()
+    public function privileges()
     {
-        return $this->hasMany(Privileges::class);
+        return $this->belongsTo(Privileges::class);
     }
-    public function Roles()
+    public function roles()
     {
-        return $this->hasMany(Role::class);
+        return $this->belongsTo(Role::class);
     }
 }

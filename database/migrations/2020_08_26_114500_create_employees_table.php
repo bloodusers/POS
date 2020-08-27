@@ -31,11 +31,12 @@ class CreateEmployeesTable extends Migration
             $table->string('email')->unique();
             $table->string('address')->nullable();
             $table->string('password');
-            $table->unsignedBigInteger('org_id');
+            $table->unsignedBigInteger('user_id');
             //$table->unsignedBigInteger('privilege_id');
             $table->unsignedBigInteger('role_id');
             $table->timestamps();
-            $table->index('org_id');
+            $table->index('user_id');
+            $table->index('role_id');
             //$table->index('privilege_id');
         });
     }

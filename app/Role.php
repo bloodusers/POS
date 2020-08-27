@@ -12,7 +12,7 @@ class Role extends Model
 
 
 
-    public function RolePrivileges()
+    public function rolePrivileges()
     {
         return $this->hasMany(RolePrivileges::class);
     }

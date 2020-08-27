@@ -48,11 +48,11 @@ class Employee extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function Role()
+    public function role()
     {
-        return $this->hasOne(Role::class);
+        return $this->belongsTo(Role::class);
     }
-    public function User()
+    public function user()
     {
         return $this->belongsTo(User::class);
     }
