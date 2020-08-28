@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Organization;
 use App\User;
 use Auth;
 use Illuminate\Http\Request;
@@ -16,7 +17,8 @@ class AdminController extends Controller
 
     public function index()
     {
-        if ((Auth::user()->name == Auth::user()->shortName) && Auth::user()->shortName == Auth::user()->contactPerson && Auth::user()->contactPerson == 'admin')
+        //if ((Auth::user()->name == Auth::user()->shortName) && Auth::user()->shortName == Auth::user()->contactPerson && Auth::user()->contactPerson == 'admin')
+        if (Auth::user()->role->rolePrivileges[0]["canView"])
             return view('admin.index');
         else
             return redirect(route('login'));
@@ -24,7 +26,7 @@ class AdminController extends Controller
 
     public function update($user)
     {
-        $user = User::find($user);
+        $user = Organization::find($user);
         $user->isActive = !$user->isActive;
         $user->push();
         return redirect(route('adminPage'));

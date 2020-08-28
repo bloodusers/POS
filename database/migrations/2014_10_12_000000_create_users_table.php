@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->index('organizations_id');*/
 
-            $table->id();
+            /*$table->id();
             $table->string('name')->unique();
             $table->string('shortName')->unique();
             $table->string('contactPerson');
@@ -35,13 +35,20 @@ class CreateUsersTable extends Migration
             $table->date('regDate');
             $table->boolean('isActive')->default(false);
             $table->string('password');
-           /* $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('role_id');
-            $table->index('user_id');
-            $table->index('role_id');*/
-
             $table->rememberToken();
+            $table->timestamps();*/
+            $table->id();
+            $table->string('name');
+            $table->string('contact')->unique();
+            $table->string('email')->unique();
+            $table->string('address')->nullable();
+            $table->unsignedBigInteger('organization_id');
+            $table->unsignedBigInteger('role_id');
+            $table->string('password');
             $table->timestamps();
+            $table->index('organization_id');
+            $table->index('role_id');
+
         });
     }
 

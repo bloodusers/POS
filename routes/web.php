@@ -29,4 +29,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/adminPage', 'AdminController@index')->name('adminPage');
 Route::post('/changeStatus/{user}', 'AdminController@update')->name('/changeStatus/{id}');
+Route::post('/registerUser', 'Auth\RegisterController@create')->name('/registerUser');
 

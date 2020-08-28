@@ -15,19 +15,9 @@ class User extends Authenticatable
      *
      * @var array
      */
-   /* protected $guarded = [
-        'name' => 'required',
-        'shortName' => 'required',
-        'contactPerson' => 'required',
-        'contact' => 'required|min:11|numeric',
-        'email' => 'required|email:rfc,dns',
-        'regDate' => 'required',
-        'password' => 'required',
-        'password_confirmation' => 'required',
-    ];*/
 
     protected $fillable = [
-        'name', 'email', 'password','shortName', 'contactPerson', 'contact', 'regDate',
+        'name','contact', 'email','organization_id','role_id', 'password',
     ];
 
     /**
@@ -47,12 +37,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-   /* public function role()
+    public function role()
     {
         return $this->belongsTo(Role::class);
     }
-    public function user()
+    public function organization()
     {
-        return $this->belongsTo(User::class);
-    }*/
+        return $this->belongsTo(Organization::class);
+    }
 }

@@ -51,12 +51,13 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required',
-            'shortName' => 'required',
-            'contactPerson' => 'required',
+            'organization_id' => 'required',
+            'role_id' => 'required',
             'contact' => 'required|min:11|numeric',
             'email' => 'required|email:rfc,dns',
-            'regDate' => 'required',
             'password' => 'required',
+            'password_confirmation' => 'required',
+
         ]);
     }
 
@@ -66,22 +67,39 @@ class RegisterController extends Controller
      * @param array $data
      * @return \App\User
      */
-    protected function create(array $data)
+    protected function create()
     {
         $data = \request()->validate(
             [
                 'name' => 'required',
-                'shortName' => 'required',
-                'contactPerson' => 'required',
                 'contact' => 'required|min:11|numeric',
                 'email' => 'required|email:rfc,dns',
-                'regDate' => 'required',
+                'organization_id' => 'required|numeric',
+                'role_id' => 'required|numeric',
                 'password' => 'required',
                 'password_confirmation' => 'required',
             ]
         );
         $data['password'] = Hash::make($data['password']);
-//dd($data);
+
+      // dd($data);
+
         return User::create($data);
+
+        /*
+        $data = \request()->validate(
+            [
+                'name' => 'required',
+                'contact' => 'required|min:11|numeric',
+                'email' => 'required|email:rfc,dns',
+                'organization_id' => 'required|numeric',
+                'role_id' => 'required|numeric',
+                'password' => 'required',
+                'password_confirmation' => 'required',
+            ]
+        );
+        <!-- @if (Auth::user()->name == 'admin' && Auth::user()->shortName == 'admin' && Auth::user()->contactPerson == 'admin')-->
+        Auth::user()->role->rolePrivileges['canView']
+        */
     }
 }

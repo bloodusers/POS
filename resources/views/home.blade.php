@@ -8,11 +8,15 @@
                 <div class="card">
                     <div class=" row card-header offset-8">
                         <div class="content-area">
-
+                            <?php
+                           //echo Auth::user()->role->rolePrivileges[0]["canView"];
+                            ?>
                             {{ __('Dashboard') }}
-                            @if (Auth::user()->name == 'admin' && Auth::user()->shortName == 'admin' && Auth::user()->contactPerson == 'admin')
+
+                            @if (Auth::user()->role->rolePrivileges[0]["canView"] )
                                 <div class="btn green-button ">
-                                    <div class="margin"><a href="{{ route('adminPage') }}">{{ __('Admin Panel') }}</a></div>
+                                    <div class="margin"><a
+                                            href="{{ route('adminPage') }}">{{ __('Admin Panel') }}</a></div>
 
                                     @endif
                                 </div>

@@ -65,7 +65,7 @@
 
                                 <tbody>
                                 <div class="card-body">
-                                    @foreach(App\User::all() as $user)
+                                    @foreach(App\Organization::all() as $user)
 
                                         <tr>
                                             <td>{{$user->id}} </td>

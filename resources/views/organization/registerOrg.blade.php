@@ -7,7 +7,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <h2> <div class="card-header">{{ __('Register New User') }}</div></h2>
+                    <h2> <div class="card-header">{{ __('Register your Organization') }}</div></h2>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}">
@@ -20,6 +20,34 @@
                                     <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                     @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <!--shortName-->
+                            <div class="form-group row">
+                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Short Name') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="shortName" type="text" class="form-control @error('name') is-invalid @enderror" name="shortName" value="{{ old('shortName') }}" required autocomplete="name" autofocus>
+
+                                    @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <!--contactPerson-->
+                            <div class="form-group row">
+                                <label for="contactPerson" class="col-md-4 col-form-label text-md-right">{{ __('Contact Person') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="contactPerson" type="name" class="form-control @error('name') is-invalid @enderror" name="contactPerson" value="{{ old('contactPerson') }}" required autocomplete="name" autofocus>
+
+                                    @error('contactPerson')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -40,7 +68,6 @@
                                     @enderror
                                 </div>
                             </div>
-                            <!--mail-->
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
@@ -54,34 +81,21 @@
                                     @enderror
                                 </div>
                             </div>
-                            <!--organization_id-->
+                            <!--regDate-->
                             <div class="form-group row">
-                                <label for="organization_id" class="col-md-4 col-form-label text-md-right">{{ __('Organization id') }}</label>
+                                <label for="regDate" class="col-md-4 col-form-label text-md-right">{{ __('Registration Date') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="organization_id" type="number" class="form-control @error('number') is-invalid @enderror" name="organization_id" value="{{ old('organization_id') }}" required autocomplete="organization_id" autofocus>
+                                    <input id="regDate" type="date" class="form-control @error('date') is-invalid @enderror" name="regDate" value="{{ old('regDate') }}" required autocomplete="regDate" autofocus>
 
-                                    @error('organization_id')
+                                    @error('regDate')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                     @enderror
                                 </div>
                             </div>
-                            <!--role_id-->
-                            <div class="form-group row">
-                                <label for="role_id" class="col-md-4 col-form-label text-md-right">{{ __('Role id') }}</label>
 
-                                <div class="col-md-6">
-                                    <input id="role_id" type="number" class="form-control @error('number') is-invalid @enderror" name="role_id" value="{{ old('role_id') }}" required autocomplete="role_id" autofocus>
-
-                                    @error('role_id')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                            </div>
                             <div class="form-group row">
                                 <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
