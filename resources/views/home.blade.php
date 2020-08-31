@@ -10,7 +10,7 @@
                         <h2>
                             <div class="content-area">
                                 <?php
-                                //echo Auth::user()->role->rolePrivileges[0]["canView"];
+                                //echo Auth::user()->role->rolePrivileges["canView"];
                                 ?>
                                 {{ __('Hello ').Auth::user()->name }}
                             </div>
@@ -26,28 +26,28 @@
                     @endif
 
                     <hr>
-                    @if (Auth::user()->role->rolePrivileges[0]["canView"] )
+                    @if (Auth::user()->role->rolePrivileges["canView"] )
                         <div class="btn green-button ">
                             <div class="margin"><a
                                     href="{{ route('adminPage') }}">{{ __('Admin Panel') }}</a></div>
                         </div>
                     @endif
 
-                    @if (Auth::user()->role->rolePrivileges[0]["canAdd"] )
+                    @if (Auth::user()->role->rolePrivileges["canAdd"] )
                         <hr>
                         <div class="btn green-button ">
                             <div class="margin"><a
                                     href="{{ route('addOrg') }}">{{ __('Add Organization') }}</a></div>
                         </div>
                     @endif
-                    @if (Auth::user()->role->rolePrivileges[0]["canEdit"] )
+                    @if (Auth::user()->role->rolePrivileges["canEdit"] )
                         <hr>
                         <div class="btn green-button ">
                             <div class="margin"><a
                                     href="{{ route('adminPage') }}">{{ __('Edit Organization') }}</a></div>
                         </div>
                     @endif
-                    @if (Auth::user()->role->rolePrivileges[0]["canDelete"] )
+                    @if (Auth::user()->role->rolePrivileges["canDelete"] )
                         <hr>
                         <div class="btn green-button ">
                             <div class="margin"><a

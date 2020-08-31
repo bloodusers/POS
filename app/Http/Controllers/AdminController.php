@@ -18,7 +18,7 @@ class AdminController extends Controller
     public function index()
     {
         //if ((Auth::user()->name == Auth::user()->shortName) && Auth::user()->shortName == Auth::user()->contactPerson && Auth::user()->contactPerson == 'admin')
-        if (Auth::user()->role->rolePrivileges[0]["canView"])
+        if (Auth::user()->role->rolePrivileges["canView"])
             return view('admin.index');
         else
             return redirect(route('login'));

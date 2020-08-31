@@ -19,14 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="yakki ended">
-      <change afterPath="$PROJECT_DIR$/resources/views/organization/index.blade.php" afterDir="false" />
+    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="privileges done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.styleci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.styleci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrganizationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrganizationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Role.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/organization/registerOrg.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +197,8 @@
       <workItem from="1598612754099" duration="14116000" />
       <workItem from="1598644284488" duration="90000" />
       <workItem from="1598709838036" duration="5717000" />
-      <workItem from="1598729096565" duration="1366000" />
+      <workItem from="1598729096565" duration="2026000" />
+      <workItem from="1598807958170" duration="1661000" />
     </task>
     <task id="LOCAL-00001" summary="lel">
       <created>1598268273226</created>
@@ -314,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598642563048</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="privileges done">
+      <created>1598806315779</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1598806315779</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +347,8 @@
     <MESSAGE value="relations +Privileges+roles done" />
     <MESSAGE value="lag gey bhau" />
     <MESSAGE value="yakki ended" />
-    <option name="LAST_COMMIT_MESSAGE" value="yakki ended" />
+    <MESSAGE value="privileges done" />
+    <option name="LAST_COMMIT_MESSAGE" value="privileges done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1850" y="201" key="#Web_Browsers" timestamp="1598454354742">
@@ -374,10 +380,10 @@
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1884" y="335" key="NewPhpFileDialog/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598022434665" />
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1598642580676">
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1598806317040">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598642580676" />
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598806317040" />
     <state x="1866" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598442347169">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
@@ -386,13 +392,13 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="-3" y="-15" width="1296" height="555" maximized="true" key="dock-window-1/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598621911359" />
-    <state x="1759" y="11" width="578" height="801" key="find.popup" timestamp="1598453527480">
+    <state x="1759" y="11" width="578" height="801" key="find.popup" timestamp="1598809387574">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1759" y="11" width="578" height="801" key="find.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598453527480" />
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1598712792760">
+    <state x="1759" y="11" width="578" height="801" key="find.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598809387574" />
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1598809376934">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598712792760" />
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598809376934" />
   </component>
 </project>
