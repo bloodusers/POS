@@ -27,11 +27,16 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//admin
 Route::get('/adminPage', 'AdminController@index')->name('adminPage');
+Route::post('/changeStatus/{user}', 'AdminController@update')->name('/changeStatus/{id}');
 //org
 Route::get('/addOrg', 'OrganizationController@index')->name('addOrg');
 Route::post('/registerOrg', 'OrganizationController@create')->name('/registerOrg');
-//end org
-Route::post('/changeStatus/{user}', 'AdminController@update')->name('/changeStatus/{id}');
+//end org category
+Route::get('/addCategory', 'CategoryController@index')->name('addCategory');
+Route::get('/showCategory', 'CategoryController@view')->name('showCategory');
+Route::post('/regCategory', 'CategoryController@create')->name('/regCategory');
+//end category
 Route::post('/registerUser', 'Auth\RegisterController@create')->name('/registerUser');
 

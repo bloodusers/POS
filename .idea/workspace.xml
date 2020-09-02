@@ -19,8 +19,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="privileges done">
+    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="CreateCategoriesTable">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/category/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/category/view.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/temp.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrganizationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrganizationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Organization.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Organization.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/theme.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/theme.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/orgnization/registerorg.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,29 +157,35 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1gJTa084TFv1VC6suAztG5eRypT" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/category" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\POS\resources\views\organization" />
-      <recent name="C:\xampp\htdocs\POS\resources\views\orgnization" />
-      <recent name="C:\xampp\htdocs\POS\resources\views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\POS\resources\views\category" />
       <recent name="C:\xampp\htdocs\POS\app\Http\Controllers" />
       <recent name="C:\xampp\htdocs\POS\resources\views\organization" />
       <recent name="C:\xampp\htdocs\POS\resources\views\auth" />
       <recent name="C:\xampp\htdocs\POS\resources\views\admin" />
-      <recent name="C:\xampp\htdocs\POS\resources\views\layouts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\POS\resources\views\organization" />
+      <recent name="C:\xampp\htdocs\POS\resources\views\orgnization" />
+      <recent name="C:\xampp\htdocs\POS\resources\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -196,7 +217,12 @@
       <workItem from="1598709838036" duration="5717000" />
       <workItem from="1598729096565" duration="2026000" />
       <workItem from="1598807958170" duration="1661000" />
-      <workItem from="1598865139362" duration="2822000" />
+      <workItem from="1598865139362" duration="4345000" />
+      <workItem from="1598887252861" duration="5873000" />
+      <workItem from="1598955096816" duration="7237000" />
+      <workItem from="1598993378241" duration="599000" />
+      <workItem from="1599039458631" duration="9023000" />
+      <workItem from="1599070694651" duration="232000" />
     </task>
     <task id="LOCAL-00001" summary="lel">
       <created>1598268273226</created>
@@ -324,7 +350,21 @@
       <option name="project" value="LOCAL" />
       <updated>1598871862017</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="CreateCategoriesTable">
+      <created>1598874421673</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1598874421673</updated>
+    </task>
+    <task id="LOCAL-00020" summary="CreateCategoriesTable">
+      <created>1598874436972</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1598874436972</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,6 +383,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="lel" />
     <MESSAGE value="startAdminPage" />
     <MESSAGE value="adminPage+isActive&#10;done" />
@@ -354,7 +395,8 @@
     <MESSAGE value="yakki ended" />
     <MESSAGE value="privileges done" />
     <MESSAGE value="rolepri" />
-    <option name="LAST_COMMIT_MESSAGE" value="rolepri" />
+    <MESSAGE value="CreateCategoriesTable" />
+    <option name="LAST_COMMIT_MESSAGE" value="CreateCategoriesTable" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1850" y="201" key="#Web_Browsers" timestamp="1598454354742">
@@ -386,10 +428,10 @@
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1884" y="335" key="NewPhpFileDialog/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598022434665" />
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1598871864143">
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1598874442523">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598871864143" />
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598874442523" />
     <state x="1866" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598442347169">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
@@ -398,13 +440,13 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="-3" y="-15" width="1296" height="555" maximized="true" key="dock-window-1/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598621911359" />
-    <state x="1759" y="11" width="578" height="801" key="find.popup" timestamp="1598809387574">
+    <state x="1759" y="11" width="578" height="801" key="find.popup" timestamp="1598960305128">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1759" y="11" width="578" height="801" key="find.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598809387574" />
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1598809376934">
+    <state x="1759" y="11" width="578" height="801" key="find.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598960305128" />
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1598959098292">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598809376934" />
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598959098292" />
   </component>
 </project>

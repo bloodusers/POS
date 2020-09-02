@@ -30,7 +30,7 @@ class OrganizationController extends Controller
 
     public function index()
     {
-        if (Auth::user()->role->rolePrivileges[0]["canAdd"])
+        if (Auth::user()->role->rolePrivileges["canAdd"])
             return view('organization.index');
         else
             return redirect(route('login'));
@@ -49,8 +49,9 @@ class OrganizationController extends Controller
         );
         //date("Y-m-d")
         $data['regDate'] = date("Y-m-d");
+        Organization::create($data);
        // dd($data);
-        \App\Organization::create($data);
+        //return \App\Organization::create($data);
         return redirect(route('home'));
     }
 }

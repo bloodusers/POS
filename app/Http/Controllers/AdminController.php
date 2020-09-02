@@ -6,6 +6,8 @@ use App\Organization;
 use App\User;
 use Auth;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -19,7 +21,10 @@ class AdminController extends Controller
     {
         //if ((Auth::user()->name == Auth::user()->shortName) && Auth::user()->shortName == Auth::user()->contactPerson && Auth::user()->contactPerson == 'admin')
         if (Auth::user()->role->rolePrivileges["canView"])
-            return view('admin.index');
+        {
+            //$data=DB::table('organizations')->simplePaginate(5);
+            return view('admin.index', ['data' => Organization::paginate(5)]);
+        }
         else
             return redirect(route('login'));
     }
@@ -29,7 +34,8 @@ class AdminController extends Controller
         $user = Organization::find($user);
         $user->isActive = !$user->isActive;
         $user->push();
-        return redirect(route('adminPage'));
+        // return redirect(route('adminPage'));
+        return redirect()->back()->with('Success', 'Status successfully!');
         //dd(($user));
         //return view(route('adminPage'));
         //return view('admin.index');

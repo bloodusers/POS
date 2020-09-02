@@ -109,7 +109,7 @@
                 <div class="navbar-collapse collapse" id="posNav">
                     <!--- NAVIGATION LINK -->
                     <ul class="nav navbar-nav navbar-right main-navigation mr-auto " id="internal-scroll">
-                        <li class="nav-item "><a href="#home">Home</a>
+                        <li class="nav-item "><a href="{{route('home')}}">Home</a>
                         </li>
                         <li class="nav-item"><a href="#section1">About</a>
                         </li>

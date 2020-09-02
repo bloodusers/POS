@@ -65,7 +65,7 @@
 
                                 <tbody>
                                 <div class="card-body">
-                                    @foreach(App\Organization::all() as $user)
+                                    @foreach($data as $user)
 
                                         <tr>
                                             <td>{{$user->id}} </td>
@@ -103,10 +103,13 @@
                                         </tr>
                                     @endforeach
                                 </div>
+
                                 </tbody>
 
                             </table>
-
+                            <div>
+                                {{$data->links()}}
+                            </div>
                         </div>
                     </div>
 
