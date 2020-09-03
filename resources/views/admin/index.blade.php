@@ -10,6 +10,7 @@
                         <div class="content-area">
 
                             <h2 class="green-text"> {{ __('Admin Page') }}</h2>
+                            <h6 class="green-text">{{$count}}</h6>
                         </div>
                     </div>
 
@@ -107,7 +108,7 @@
                                 </tbody>
 
                             </table>
-                            <div>
+                            <div class="">
                                 {{$data->links()}}
                             </div>
                         </div>

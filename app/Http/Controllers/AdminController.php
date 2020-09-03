@@ -23,7 +23,7 @@ class AdminController extends Controller
         if (Auth::user()->role->rolePrivileges["canView"])
         {
             //$data=DB::table('organizations')->simplePaginate(5);
-            return view('admin.index', ['data' => Organization::paginate(5)]);
+            return view('admin.index', ['data' => Organization::paginate(5),'count'=>Organization::all()->count()]);
         }
         else
             return redirect(route('login'));
