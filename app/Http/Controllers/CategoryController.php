@@ -55,6 +55,6 @@ class CategoryController extends Controller
         //return \App\Organization::create($data);
         //dd($data);
         Category::create($data);
-        return redirect(route('home'));
+        return $this->view();
     }
 }

@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     protected $fillable = [
-        'name','organization_id',
+        //'name','organization_id',
     ];
     protected $guarded = [
-        'name','organization_id',
+        //'name','organization_id',
     ];
     public function children()
     {
