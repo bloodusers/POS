@@ -23,6 +23,14 @@ Route::get('/', function () {
 //Route::post('companyStore', 'OrganizationController@store')->name('companyStore');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/tmp',function ()
+{
+    return App\Category::with('children')->whereNull('category_id')->get();
+});
+Route::get('/tmp1',function ()
+{
+    return view('category.menuTreeview');
+});
 
 Auth::routes();
 

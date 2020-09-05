@@ -49885,3 +49885,5 @@ module.exports = __webpack_require__(/*! C:\xampp\htdocs\laraPrac\resources\sass
 /***/ })
 
 /******/ });
+
+

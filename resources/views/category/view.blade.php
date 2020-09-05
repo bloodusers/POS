@@ -1,7 +1,10 @@
 @extends('layouts.theme')
 
+
 @section('content')
 
+
+    <!--
     <div class="container-md step-box-left diffuse-shadow red-line-bottom white-bg wow fadeInLeft">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -9,7 +12,7 @@
                     <div class=" row card-header offset-8">
                         <div class="content-area">
 
-                            <h2 class="green-text"> {{ __('Admin Page') }}</h2>
+                            <h2 class="green-text"> {{ __('Categories') }}</h2>
                         </div>
                     </div>
 
@@ -26,50 +29,60 @@
             </div>
         </div>
     </div>
-    <div class=" container-md step-box-right diffuse-shadow red-line-bottom white-bg wow fadeInLeft">
+-->
 
-        <div class="col-md-8">
-            <div class="card">
-                <div class="row justify-content-center">
-                    <div class=" row card-header offset-6">
-                        <div class="content-area">
-
-                            <table class="table table-hover content-area ">
-
-                                <thead>
-                                <th>
-                                    <h6 class="green-text">id</h6>
-                                </th>
-                                <th>
-                                    <h6 class="green-text">Name</h6>
-                                </th>
-                                <th>
-                                    <h6 class="green-text">Description</h6>
-                                </th>
-
-                                </thead>
-
-                                <tbody>
-
-                                <div class="card-body border-left-20">
-                                    @foreach(App\Category::all()->where('organization_id', '=',Auth::user()->organization_id) as $data)
-                                        <tr>
-                                            <td>{{$data->id}} </td>
-                                            <td>{{$data->name}} </td>
-
-                                            <td>{{$data->description}} </td>
-
-                                        </tr>
-                                    @endforeach
-                                </div>
-                                </tbody>
-
-                            </table>
-
-                        </div>
-                    </div>
-
+<!--new-->
+    <div class="sidenav" style="margin-top: 70px;font-size: smaller">
+        @foreach($data as $cat)
+        <button class="dropdown-btn">{{ucfirst($cat->name)}}
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            @foreach($cat->children as $subCat)
+            <button class="dropdown-btn">--{{ucfirst($subCat->name)}}
+                <i class="fa fa-caret-down"></i>
+            </button>
+                <div class="dropdown-container">
+                    @foreach($subCat->children as $mod)
+                        <button class="dropdown-btn">---{{ucfirst($mod->name)}}
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                    @endforeach
                 </div>
-            </div>
+            @endforeach
         </div>
+        @endforeach
+    </div>
+    <!--new-->
+<script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+</script>
 @endsection
+
+<!--
+@foreach($data as $cat)
+    <button class="dropdown-btn"style="margin-top: 200px ;padding-right: 20px">{{$cat->name}}
+        <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+        @foreach($cat->children as $subCat)
+            <button class="dropdown-btn"style="margin-top: 200px ;padding-right: 20px">{{$subCat->name}}
+                <i class="fa fa-caret-down"></i>
+            </button>
+        @endforeach
+    </div>
+@endforeach
+-->

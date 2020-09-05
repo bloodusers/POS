@@ -13,7 +13,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        /*view()->composer('shared.navbar', function($view){
+            //get all parent categories with their subcategories
+            $categories = \App\Category::with('children')->whereNull('category_id')->get();
+            //attach the categories to the view.
+            $view->with(compact('categories'));
+        });*/
     }
 
     /**

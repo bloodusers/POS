@@ -36,8 +36,9 @@
 
                             <div class="col-md-6">
                                 <input id="shortName" type="text"
-                                       class="form-control @error('description') is-invalid @enderror" name="description"
-                                       value="{{ old('description') }}" required autocomplete="description" autofocus>
+                                       class="form-control @error('description') is-invalid @enderror"
+                                       name="description"
+                                       value="{{ old('description') }}">
 
                                 @error('description')
                                 <span class="invalid-feedback red-text" role="alert">
@@ -46,14 +47,43 @@
                                 @enderror
                             </div>
                         </div>
+                        <!--new-->
 
-                        <div class="">
-                            <div class="">
-                                <button type="submit" class="btn btn-default standard-button green-button">
-                                    {{ __('Add category') }}
-                                </button>
-                            </div>
+<!--
+                        <div class="form-group row">
+                        <label for="category_id">Choose a Parent Category:</label>
+
+                        <select id="category_id" ">
+                        <option value="">NONE</option>
+                        @foreach($data as $cat)
+                            <option value="category_id">{{$cat->name}}</option>
+                            @foreach($cat->children as $subCat)
+                                <option value="category_id">--{{$subCat->name}}</option>
+                            @endforeach
+                        @endforeach
+                            </select>
                         </div>
+                        -->
+                        <label for="category_id">Select parent category:</label>
+                        <select id="category_id" name="category_id">
+                                <option value="">NONE</option>
+                            @foreach($data as $cat)
+                                <option value={{$cat->id}}>{{ucfirst($cat->name)}}</option>
+                                @foreach($cat->children as $subCat)
+                                    <option value={{$subCat->id}}>--{{ucfirst($subCat->name)}}</option>
+                                @endforeach
+                            @endforeach
+                        </select>
+
+
+                            <!--new-->
+                            <div class="">
+                                <div class="">
+                                    <button type="submit" class="btn btn-default standard-button green-button">
+                                        {{ __('Add category') }}
+                                    </button>
+                                </div>
+                            </div>
 
                     </form>
                 </div>
