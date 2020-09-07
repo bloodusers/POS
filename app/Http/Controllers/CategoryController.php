@@ -40,7 +40,7 @@ class CategoryController extends Controller
 
     }
 
-    public function create()
+    public function create()//regCategory
     {
         //dd(\request());
         $data = \request()->validate(

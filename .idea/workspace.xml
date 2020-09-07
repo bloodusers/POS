@@ -23,6 +23,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrganizationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrganizationController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +211,8 @@
       <workItem from="1598955096816" duration="7237000" />
       <workItem from="1598993378241" duration="599000" />
       <workItem from="1599039458631" duration="9023000" />
-      <workItem from="1599070694651" duration="29307000" />
+      <workItem from="1599070694651" duration="29326000" />
+      <workItem from="1599346838601" duration="8906000" />
     </task>
     <task id="LOCAL-00001" summary="lel">
       <created>1598268273226</created>
@@ -372,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599320413037</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Category pain yakki done">
+      <created>1599334181539</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1599334181539</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +416,7 @@
     <MESSAGE value="CreateCategoriesTable" />
     <MESSAGE value="paginate done" />
     <MESSAGE value="Category pain yakki done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Category pain yakki done" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1850" y="201" key="#Web_Browsers" timestamp="1598454354742">
@@ -438,10 +448,10 @@
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1884" y="335" key="NewPhpFileDialog/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598022434665" />
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1599320413850">
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1599334186510">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1599320413850" />
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1599334186510" />
     <state x="1866" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598442347169">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>

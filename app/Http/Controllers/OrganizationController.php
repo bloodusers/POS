@@ -27,13 +27,17 @@ class OrganizationController extends Controller
         ]);
     }*/
     protected $redirectTo = RouteServiceProvider::HOME;
-
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
-        if (Auth::user()->role->rolePrivileges["canAdd"])
+       /* if (Auth::user()->role->rolePrivileges["canAdd"])
             return view('organization.index');
         else
-            return redirect(route('login'));
+            return redirect(route('login'));*/
+        return ValidateUserSession(view('organization.index'),"canAdd");
     }
 
     public function create()
