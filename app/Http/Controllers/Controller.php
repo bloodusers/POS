@@ -8,12 +8,16 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Auth;
 
-function ValidateUserSession($redirectOnTrue, $privilege)
+function ValidateUserSession($redirectOnSuccess, $privilege,$redirectOnFail=null)
 {
     if (Auth::user()->role->rolePrivileges[$privilege]) {
-        return $redirectOnTrue;
+        return $redirectOnSuccess;
     }
-    else return redirect(route('login'));
+    else if ($redirectOnFail)
+        return $redirectOnFail;
+    else
+        return redirect(route('login'));
+
 }
 class Controller extends BaseController
 {

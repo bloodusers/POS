@@ -27,19 +27,52 @@ class OrganizationController extends Controller
         ]);
     }*/
     protected $redirectTo = RouteServiceProvider::HOME;
+
     public function __construct()
     {
         $this->middleware('auth');
     }
+
     public function index()
     {
-       /* if (Auth::user()->role->rolePrivileges["canAdd"])
-            return view('organization.index');
-        else
-            return redirect(route('login'));*/
-        return ValidateUserSession(view('organization.index'),"canAdd");
+        /* if (Auth::user()->role->rolePrivileges["canAdd"])
+             return view('organization.index');
+         else
+             return redirect(route('login'));*/
+        return ValidateUserSession(view('organization.index'), "canAdd");
     }
 
+    public function edit($id)
+    {
+       //dd($id);
+        return ValidateUserSession(view('organization.index',['data' => Organization::find($id)]), "canEdit");
+    }
+    public function update($id)
+    {
+        $data = \request()->validate(
+            [
+                'name' => 'required',
+                'shortName' => 'required',
+                'contactPerson' => 'required',
+                'contact' => 'required|min:11|numeric',
+                'email' => 'required|email:rfc,dns',
+            ]
+        );
+        Organization::where('id',$id)->update($data);
+       //dd(Organization::find($id));
+        return redirect(route('adminPage'));
+    }
+    public function toggleStatus($user)
+    {
+        $user = Organization::findOrFail($user);
+        $user->isActive = !$user->isActive;
+        $user->push();
+        // return redirect(route('adminPage'));
+        return redirect()->back()->with('Success', 'Status successfully!');
+        //dd(($user));
+        //return view(route('adminPage'));
+        //return view('admin.index');
+    }
     public function create()
     {
         $data = \request()->validate(
@@ -54,7 +87,7 @@ class OrganizationController extends Controller
         //date("Y-m-d")
         $data['regDate'] = date("Y-m-d");
         Organization::create($data);
-       // dd($data);
+        // dd($data);
         //return \App\Organization::create($data);
         return redirect(route('home'));
     }

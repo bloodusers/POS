@@ -37,8 +37,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 //admin
 Route::get('/adminPage', 'AdminController@index')->name('adminPage');
-Route::post('/changeStatus/{user}', 'AdminController@update')->name('/changeStatus/{id}');
+//Route::post('/changeStatus/{user}', 'AdminController@update')->name('/changeStatus/{id}');
 //org
+Route::post('/org/{user}/changeStatus', 'OrganizationController@toggleStatus')->name('/org/{user}/changeStatus');
+Route::post('/org/{user}/edit', 'OrganizationController@edit')->name('/org/{user}/edit');//edit form
+Route::patch('/org/{user}', 'OrganizationController@update')->name('/org.update');//update from controller
 Route::get('/addOrg', 'OrganizationController@index')->name('addOrg');
 Route::post('/registerOrg', 'OrganizationController@create')->name('/registerOrg');
 //end org category

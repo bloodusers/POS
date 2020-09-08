@@ -60,6 +60,96 @@
 
 
 /*new*/
+/*newCard*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+/*resMyTry*/
+/* SECREEN WIDTH undeer 992px */
+@media screen and (max-width: 991px) {
+  .footer-col {
+    text-align: center !important;
+  }
+}
+
+/* SCREEN WIDTH <= 640px */
+@media screen and (max-width: 640px) {
+  .steps .step .step-box-left,
+  .steps .step .step-box-right {
+    width: 100%;
+    height: auto;
+  }
+  .subscribe-form .input-box {
+    border-radius: 30px;
+  }
+  .subscribe-form .standard-button {
+    margin-left: 25px;
+    border-radius: 30px;
+  }
+}
+
+/* SCREEN WIDTH <= 480px */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 62.5%;
+  }
+  .home .color-overlay {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+  .home .red-button {
+    margin-bottom: 0;
+  }
+  .about-box .about-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .steps .step .step-number {
+    margin-bottom: 50px;
+  }
+  .testimonials .single-feedback .feedback-content blockquote cite .client-image {
+    display: none;
+  }
+}
+
+/*resMyTryEnd*/
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0);
+  padding: 0px;
+  text-align: center;
+}
+/*newCardEdn*/
 /* SCREEN WIDTH UNDER 1200px */
 @media screen and (max-width: 1199px) {
   .about-box {

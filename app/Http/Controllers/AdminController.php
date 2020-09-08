@@ -20,16 +20,19 @@ class AdminController extends Controller
     public function index()
     {
         //if ((Auth::user()->name == Auth::user()->shortName) && Auth::user()->shortName == Auth::user()->contactPerson && Auth::user()->contactPerson == 'admin')
-        if (Auth::user()->role->rolePrivileges["canView"])
+        /*if (Auth::user()->role->rolePrivileges["canView"])
         {
             //$data=DB::table('organizations')->simplePaginate(5);
             return view('admin.index', ['data' => Organization::paginate(5),'count'=>Organization::all()->count()]);
         }
         else
-            return redirect(route('login'));
+            return redirect(route('login'));*/
+
+            return ValidateUserSession(view('admin.index', ['data' => Organization::paginate(10)]),
+                'canView');
     }
 
-    public function update($user)
+   /* public function update($user)
     {
         $user = Organization::find($user);
         $user->isActive = !$user->isActive;
@@ -39,5 +42,5 @@ class AdminController extends Controller
         //dd(($user));
         //return view(route('adminPage'));
         //return view('admin.index');
-    }
+    }*/
 }

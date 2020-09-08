@@ -8,19 +8,31 @@
         <div class="col-md-8">
             <div class="card">
                 <h2>
-                    <div class="card-header">{{ __('Register your Organization') }}</div>
+                    @if($data ?? '')
+                        <div class="card-header">{{ __('Edit your Organization') }}</div>
+                    @else
+                        <div class="card-header">{{ __('Register your Organization') }}</div>
+                    @endif
                 </h2>
-
                 <div class="card-body">
-                    <form method="POST" action="{{ route('/registerOrg') }}">
-                        @csrf
+                    <form method="POST"
+                          @if(!($data ?? ''))
+                          action="{{ route('/registerOrg') }}"
+                          @else
+                          action="/org/{{$data->id}})"
+                          @endif
+                    >
 
+                        @csrf
+                        @if(($data ?? ''))
+                            @method('PATCH')
+                        @endif
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
-                                       name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                       name="name" value="{{ old('name') ?? $data->name??'' }}" required autocomplete="name" autofocus>
 
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
@@ -37,7 +49,7 @@
                             <div class="col-md-6">
                                 <input id="shortName" type="text"
                                        class="form-control @error('name') is-invalid @enderror" name="shortName"
-                                       value="{{ old('shortName') }}" required autocomplete="name" autofocus>
+                                       value="{{ old('shortName') ?? $data->shortName??'' }}" required autocomplete="name" autofocus>
 
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
@@ -54,7 +66,7 @@
                             <div class="col-md-6">
                                 <input id="contactPerson" type="name"
                                        class="form-control @error('name') is-invalid @enderror" name="contactPerson"
-                                       value="{{ old('contactPerson') }}" required autocomplete="name" autofocus>
+                                       value="{{ old('contactPerson')?? $data->contactPerson??'' }}" required autocomplete="name" autofocus>
 
                                 @error('contactPerson')
                                 <span class="invalid-feedback" role="alert">
@@ -71,7 +83,7 @@
                             <div class="col-md-6">
                                 <input id="contact" type="tel"
                                        class="form-control @error('contact') is-invalid @enderror" name="contact"
-                                       value="{{ old('contact') }}" required autocomplete="contact" autofocus>
+                                       value="{{ old('contact') ?? $data->contact??''}}" required autocomplete="contact" autofocus>
 
                                 @error('contact')
                                 <span class="invalid-feedback" role="alert">
@@ -86,7 +98,7 @@
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                                       name="email" value="{{ old('email') }}" required autocomplete="email">
+                                       name="email" value="{{ old('email') ?? $data->email??''}}" required autocomplete="email">
 
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -98,7 +110,11 @@
                         <div class="">
                             <div class="">
                                 <button type="submit" class="btn btn-default standard-button green-button">
+                                    @if($data??'')
+                                    {{ __('Update') }}
+                                    @else
                                     {{ __('Register') }}
+                                    @endif
                                 </button>
                             </div>
                         </div>

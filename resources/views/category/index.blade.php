@@ -35,38 +35,40 @@
                                    class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
 
                             <div class="col-md-6">
-                                <input id="shortName" type="text"
-                                       class="form-control @error('description') is-invalid @enderror"
-                                       name="description"
-                                       value="{{ old('description') }}">
+                                <textarea id="shortName" type="text"
+                                          class="form-control @error('description') is-invalid @enderror"
+                                          name="description"
+                                          value="{{ old('description') }}"
+                                          rows="5" cols="100">
 
                                 @error('description')
                                 <span class="invalid-feedback red-text" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+                                </textarea>
                             </div>
                         </div>
                         <!--new-->
 
-<!--
+                    <!--
                         <div class="form-group row">
                         <label for="category_id">Choose a Parent Category:</label>
 
                         <select id="category_id" ">
                         <option value="">NONE</option>
                         @foreach($data as $cat)
-                            <option value="category_id">{{$cat->name}}</option>
+                        <option value="category_id">{{$cat->name}}</option>
                             @foreach($cat->children as $subCat)
-                                <option value="category_id">--{{$subCat->name}}</option>
+                            <option value="category_id">--{{$subCat->name}}</option>
                             @endforeach
-                        @endforeach
-                            </select>
-                        </div>
-                        -->
+                    @endforeach
+                        </select>
+                    </div>
+-->
                         <label for="category_id">Select parent category:</label>
                         <select id="category_id" name="category_id">
-                                <option value="">NONE</option>
+                            <option value="">NONE</option>
                             @foreach($data as $cat)
                                 <option value={{$cat->id}}>{{ucfirst($cat->name)}}</option>
                                 @foreach($cat->children as $subCat)
@@ -76,14 +78,14 @@
                         </select>
 
 
-                            <!--new-->
+                        <!--new-->
+                        <div class="">
                             <div class="">
-                                <div class="">
-                                    <button type="submit" class="btn btn-default standard-button green-button">
-                                        {{ __('Add category') }}
-                                    </button>
-                                </div>
+                                <button type="submit" class="btn btn-default standard-button green-button">
+                                    {{ __('Add category') }}
+                                </button>
                             </div>
+                        </div>
 
                     </form>
                 </div>
