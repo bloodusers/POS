@@ -46,6 +46,10 @@ Route::get('/addOrg', 'OrganizationController@index')->name('addOrg');
 Route::post('/registerOrg', 'OrganizationController@create')->name('/registerOrg');
 //end org category
 Route::get('/addCategory', 'CategoryController@index')->name('addCategory');
+Route::get('/editCategory', 'CategoryController@editList')->name('editCategory');//show listing
+Route::post('/Cat/{id}/edit', 'CategoryController@edit')->name('/cat/{id}/edit');//edit form
+Route::delete('/Cat/{id}/delete', 'CategoryController@delete')->name('Category.destroy');//delete category
+Route::patch('/Cat/{id}', 'CategoryController@update')->name('/Cat.update');//update from controller
 Route::get('/showCategory', 'CategoryController@view')->name('showCategory');
 Route::post('/regCategory', 'CategoryController@create')->name('/regCategory');
 //end category

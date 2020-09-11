@@ -19,7 +19,7 @@
                           @if(!($data ?? ''))
                           action="{{ route('/registerOrg') }}"
                           @else
-                          action="/org/{{$data->id}})"
+                          action="/org/{{$data->id}}"
                           @endif
                     >
 

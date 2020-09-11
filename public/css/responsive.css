@@ -1,3 +1,8 @@
+/*newSpan*/
+span.a {
+  display: inline; /* the default for span */ 
+}
+/*newSpan*/
 /*new*/
 /* Fixed sidenav, full height */
 .sidenav {
@@ -18,7 +23,7 @@
   text-decoration: none;
   font-size: 20px;
   color: #818181;
-  display: block;
+  display: inline;
   border: none;
   background: none;
   width:100%;

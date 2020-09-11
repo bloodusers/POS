@@ -2,17 +2,29 @@
 
 @section('content')
 </br>
-</br>
+</br>a
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <h2>
-                    <div class="card-header">{{ __('Add category') }}</div>
+                    @if($info ?? '')
+                        <div class="card-header">{{ __('Edit category') }}</div>
+                    @else
+                        <div class="card-header">{{ __('Add category') }}</div>
+                    @endif
                 </h2>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('/regCategory') }}">
+                    <form method="POST"
+                          @if(!($info ?? ''))
+                          action="{{ route('/regCategory') }}"
+                          @else
+                          action="/Cat/{{$info->id}}"
+                        @endif>
+                        @if($info ??'')
+                            @method('PATCH')
+                        @endif
                         @csrf
 
                         <div class="form-group row">
@@ -20,7 +32,8 @@
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
-                                       name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                       name="name" value="{{ old('name') ??$info->name??''}}" required
+                                       autocomplete="name" autofocus>
 
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
@@ -29,16 +42,17 @@
                                 @enderror
                             </div>
                         </div>
-                        <!--shortName-->
+                        <!--description-->
                         <div class="form-group row">
                             <label for="Description"
                                    class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
 
+                            {{$info->description??''}}
                             <div class="col-md-6">
                                 <textarea id="shortName" type="text"
                                           class="form-control @error('description') is-invalid @enderror"
                                           name="description"
-                                          value="{{ old('description') }}"
+                                          value="{{ old('description')??$info->description??'' }}"
                                           rows="5" cols="100">
 
                                 @error('description')
@@ -51,28 +65,23 @@
                         </div>
                         <!--new-->
 
-                    <!--
-                        <div class="form-group row">
-                        <label for="category_id">Choose a Parent Category:</label>
-
-                        <select id="category_id" ">
-                        <option value="">NONE</option>
-                        @foreach($data as $cat)
-                        <option value="category_id">{{$cat->name}}</option>
-                            @foreach($cat->children as $subCat)
-                            <option value="category_id">--{{$subCat->name}}</option>
-                            @endforeach
-                    @endforeach
-                        </select>
-                    </div>
--->
                         <label for="category_id">Select parent category:</label>
                         <select id="category_id" name="category_id">
                             <option value="">NONE</option>
                             @foreach($data as $cat)
-                                <option value={{$cat->id}}>{{ucfirst($cat->name)}}</option>
+                                <option value={{$cat->id}}
+                                @if($info??'')
+                                @if($cat->id==$info->category_id??'')
+                                    selected='selected'
+                                    @endif
+                                    @endif>{{ucfirst($cat->name)}}</option>
                                 @foreach($cat->children as $subCat)
-                                    <option value={{$subCat->id}}>--{{ucfirst($subCat->name)}}</option>
+                                    <option value={{$subCat->id}}
+                                    @if($info??'')
+                                    @if($subCat->id==$info->category_id)
+                                        selected='selected'
+                                        @endif
+                                        @endif>--{{ucfirst($subCat->name)}}</option>
                                 @endforeach
                             @endforeach
                         </select>
@@ -82,7 +91,11 @@
                         <div class="">
                             <div class="">
                                 <button type="submit" class="btn btn-default standard-button green-button">
-                                    {{ __('Add category') }}
+                                    @if($info->id ?? '')
+                                        {{ __('edit category') }}
+                                    @else
+                                        {{ __('add category') }}
+                                    @endif
                                 </button>
                             </div>
                         </div>

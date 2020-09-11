@@ -18,58 +18,63 @@
 
                     <div class="card-body">
                         @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-
-                    </div>
-                </div>
-
+        <div class="alert alert-success" role="alert">
+{{ session('status') }}
             </div>
+@endif
+
         </div>
     </div>
+
+</div>
+</div>
+</div>
 -->
 
-<!--new-->
-    <div class="sidenav" style="margin-top: 70px;font-size: smaller">
+    <!--new-->
+
+    <div class="sidenav " style="margin-top: 70px;;font-size: smaller">
+
         @foreach($data as $cat)
-        <button class="dropdown-btn">{{ucfirst($cat->name)}}
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-container">
-            @foreach($cat->children as $subCat)
-            <button class="dropdown-btn">--{{ucfirst($subCat->name)}}
-                <i class="fa fa-caret-down"></i>
+
+            <button class="dropdown-btn">{{ucfirst($cat->name)}}
+                <i class="fa fa-caret-down">
+                </i>
             </button>
-                <div class="dropdown-container">
-                    @foreach($subCat->children as $mod)
-                        <button class="dropdown-btn">---{{ucfirst($mod->name)}}
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                    @endforeach
-                </div>
-            @endforeach
-        </div>
+            <div class="dropdown-container">
+                @foreach($cat->children as $subCat)
+                    <button class="dropdown-btn">--{{ucfirst($subCat->name)}}
+
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-container">
+                        @foreach($subCat->children as $mod)
+                            <button class="dropdown-btn">---{{ucfirst($mod->name)}}
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                        @endforeach
+                    </div>
+                @endforeach
+            </div>
         @endforeach
     </div>
     <!--new-->
-<script>
-    var dropdown = document.getElementsByClassName("dropdown-btn");
-    var i;
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
 
-    for (i = 0; i < dropdown.length; i++) {
-        dropdown[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-                dropdownContent.style.display = "none";
-            } else {
-                dropdownContent.style.display = "block";
-            }
-        });
-    }
-</script>
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
 @endsection
 
 <!--
@@ -79,10 +84,22 @@
     </button>
     <div class="dropdown-container">
         @foreach($cat->children as $subCat)
-            <button class="dropdown-btn"style="margin-top: 200px ;padding-right: 20px">{{$subCat->name}}
-                <i class="fa fa-caret-down"></i>
-            </button>
-        @endforeach
-    </div>
+        <button class="dropdown-btn"style="margin-top: 200px ;padding-right: 20px">{{$subCat->name}}
+            <i class="fa fa-caret-down"></i>
+        </button>
 @endforeach
--->
+        </div>
+@endforeach
+
+
+    -->
+<!--
+ @if($canEdit)
+    <button type="submit"
+            class="dropdown-btn"
+            style="padding-top: 0.5px;padding-bottom: 0.5px;padding-right: 2px;padding-left: 2px;border-radius: 5%;border-style: none;margin-left: 0px;
+            background-color: #17a2b8";>
+{{ __('Edit') }}
+        </button>
+@endif
+    -->

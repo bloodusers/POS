@@ -40,20 +40,7 @@
                                     href="{{ route('addOrg') }}">{{ __('Add Organization') }}</a></div>
                         </div>
                     @endif
-                    @if (Auth::user()->role->rolePrivileges["canEdit"] )
-                        <hr>
-                        <div class="btn green-button ">
-                            <div class="margin"><a
-                                    href="{{ route('adminPage') }}">{{ __('Edit Organization') }}</a></div>
-                        </div>
-                    @endif
-                    @if (Auth::user()->role->rolePrivileges["canDelete"] )
-                        <hr>
-                        <div class="btn green-button ">
-                            <div class="margin"><a
-                                    href="{{ route('adminPage') }}">{{ __('Remove Organization') }}</a></div>
-                        </div>
-                    @endif
+
                 </div>
             </div>
 
