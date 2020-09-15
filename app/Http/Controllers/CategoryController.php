@@ -22,8 +22,11 @@ class CategoryController extends Controller
 
     public function index()
     {
+
+
         // if (Auth::user()->role->rolePrivileges["canAdd"])
-        return view('category.index', ['data' => Category::with('children')->whereNull('category_id')->get(),
+        return view('category.index', ['data' => Category::with('children')->where('organization_id',Auth::user()->organization_id)->
+        whereNull('category_id')->get(),
             'count' => Organization::all()->count()]);
         // else
         //   return redirect(route('login'));
@@ -31,21 +34,20 @@ class CategoryController extends Controller
 
     public function view()
     {
-        return ValidateUserSession(view('category.view', ['data' => Category::with('children')->
-        whereNull('category_id')->get(),
-            'count' => Organization::all()->count(), 'canEdit' => 1]), 'canEdit', view('category.view', ['data' =>
-            Category::with('children')->whereNull('category_id')->get(),
-            'count' => Organization::all()->count(), 'canEdit' => 0]));
+        return ValidateUserSession(view('category.view', ['data' => Category::with('children')->where('organization_id',Auth::user()->organization_id)->
+        whereNull('category_id')->get()]), 'canEdit', view('category.view', ['data' =>
+            Category::with('children')->whereNull('category_id')->get(), 'canEdit' => 0]));
     }
 
     public function editList()
     {
-        return ValidateUserSession(view('category.editList', ['data' => (Category::orderBy('created_at')->paginate(10))]), 'canEdit', redirect(back()));
+        return ValidateUserSession(view('category.editList', ['data' => (Category::orderBy('created_at')->where('organization_id',Auth::user()->organization_id)->
+        paginate(10))]), 'canEdit', redirect(back()));
     }
 
     public function edit($id)
     {
-        return ValidateUserSession(view('category.index', ['data' => Category::with('children')->whereNull('category_id')->get(),
+        return ValidateUserSession(view('category.index', ['data' => Category::with('children')->where('organization_id',Auth::user()->organization_id)->whereNull('category_id')->get(),
             'info' => Category::find($id)]), 'canEdit');
     }
 

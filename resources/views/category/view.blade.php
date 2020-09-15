@@ -94,7 +94,7 @@
 
     -->
 <!--
- @if($canEdit)
+ @if($canEdit??'')
     <button type="submit"
             class="dropdown-btn"
             style="padding-top: 0.5px;padding-bottom: 0.5px;padding-right: 2px;padding-left: 2px;border-radius: 5%;border-style: none;margin-left: 0px;

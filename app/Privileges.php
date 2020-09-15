@@ -12,6 +12,6 @@ class Privileges extends Model
 
     public function rolePrivileges()
     {
-        return $this->hasMany(RolePrivileges::class);
+        return $this->belongsTo(RolePrivileges::class);
     }
 }

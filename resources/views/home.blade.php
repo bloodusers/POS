@@ -26,6 +26,7 @@
                     @endif
 
                     <hr>
+
                     @if (Auth::user()->role->rolePrivileges["canView"] )
                         <div class="btn green-button ">
                             <div class="margin"><a
