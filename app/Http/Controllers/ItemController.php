@@ -7,6 +7,7 @@ use App\Item;
 use App\Organization;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
 class ItemController extends Controller
@@ -21,12 +22,42 @@ class ItemController extends Controller
     }
     public function edit($id)
     {
+        //dd(Item::find($id));
         return (view('item.index', ['data' => Category::with('children')->where('organization_id',Auth::user()->organization_id)->whereNull('category_id')->get(),
-            'info' => Category::find($id)]));
+            'info' => Item::find($id)]));
     }
     public function editList()
     {
-        return ValidateUserSession(view('item.editList', ['data' => (Item::orderBy('created_at')->paginate(10))]), 'canEdit', redirect(back()));
+        //$result=db::select(DB::raw('select id from categories where organization_id = '.Auth::user()->organization_id.';'));
+        $result=Category::select('id')->where('organization_id',Auth::user()->organization_id )->get();
+       // dd($result);
+        $temp=array();
+        //dd($result[1]->id);
+        foreach ($result as $res)
+        {
+            array_push($temp,$res->id);
+        }
+       //dd($temp);
+        //dd(Item::all()->whereIn('category_id',$temp));
+        return ValidateUserSession(view('item.editList', ['data' => (Item::orderBy('created_at')->whereIn('category_id',$temp)->paginate(10))]), 'canEdit', redirect(back()));
+    }
+    public function update($id)
+    {
+        //dd($id);
+        $data = \request()->validate(
+            [
+                'name' => 'required',
+                'description' => 'nullable',
+                'category_id' => 'required',
+                'item_code'=>'required',
+                'image'=>'required',
+            ]
+        );
+        $imagePath=$data['image']->store('uploads','public');
+        $data['image']=$imagePath;
+        Item::where('id', $id)->update($data);
+        return redirect(route('editCategory'));
+
     }
     public function create()//regItem
     {
@@ -40,16 +71,10 @@ class ItemController extends Controller
                 'image'=>'required',
             ]
         );
-        //dd(($data['image']));
-        //dd(Auth::user()->organization->name);
-        Storage::put('/public/'.Auth::user()->organization->name.'/', $data['image']);
-        dd(request('image'));
-        /*$imagePath = request('image')->store('uploads', 'public');
-
-        $image = Image::make(public_path("storage/{$imagePath}"));
-        $image->save();
-        $data['image']=$imagePath;*/
-        dd($data);
+        $imagePath=$data['image']->store('uploads','public');
+        //dd($imagePath.' Path');
+        $data['image']=$imagePath;
+        //dd($data);
         Item::create($data);
         return back();
     }

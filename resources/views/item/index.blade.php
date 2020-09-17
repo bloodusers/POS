@@ -4,6 +4,7 @@
 </br>
 </br>
 <div class="container">
+
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -17,10 +18,10 @@
 
                 <div class="card-body">
                     <form method="POST" enctype="multipart/form-data"
-                          @if(!($info ?? ''))
-                          action="/regItem"
+                          @if($info ?? '')
+                          action="/item/{{$info->id}}"
                           @else
-                          action="/Cat/{{$info->id}}"
+                          action="/regItem"
                         @endif>
                         @if($info ??'')
                             @method('PATCH')
@@ -47,7 +48,8 @@
                             <label for="name"
                                    class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
 
-                            <textarea name="description" rows="5" cols="52"></textarea>
+                            <textarea name="description" id="desc"
+                                      rows="5" cols="52">{{$info->description??''}}</textarea>
                         </div>
                         <!--code-->
                         <div class="form-group row">
@@ -71,7 +73,8 @@
                         <div>
                             <strong><label for="image"
                                            class="col-md-4 col-form-label text-md-right">{{ __('Add an Image') }}</label></strong>
-                            <input type="file" accept="image/*" class="form-control-file" id="image" name="image">
+                            <input type="file" accept="image/*" value="/storage/{{($info->image??'')}}"
+                                   class="form-control-file" id="image" name="image">
                             @error('image')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -84,19 +87,7 @@
                         <select id="category_id" name="category_id">
                             <option value="">NONE</option>
                             @foreach($data as $cat)
-                                <option value={{$cat->id}}
-                                @if($info??'')
-                                @if($cat->id==$info->category_id??'')
-                                    selected='selected'
-                                    @endif
-                                    @endif>{{ucfirst($cat->name)}}</option>
                                 @foreach($cat->children as $subCat)
-                                    <option value={{$subCat->id}}
-                                    @if($info??'')
-                                    @if($subCat->id==$info->category_id)
-                                        selected='selected'
-                                        @endif
-                                        @endif>--{{ucfirst($subCat->name)}}</option>
                                     @foreach($subCat->children as$gChild)
                                         <option value={{$gChild->id}}
                                         @if($info??'')
@@ -130,6 +121,11 @@
     </div>
 </div>
 </div>
+<script>
+    function setVal() {
+        document.getElementById("desc").value = "{{$info->description??''}}";
+    }
+</script>
 @endsection
 <!--<div class="form-group row">
                             <label for="Description"

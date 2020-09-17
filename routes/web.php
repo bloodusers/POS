@@ -52,12 +52,13 @@ Route::delete('/Cat/{id}/delete', 'CategoryController@delete')->name('Category.d
 Route::patch('/Cat/{id}', 'CategoryController@update')->name('/Cat.update');//update from controller
 Route::get('/showCategory', 'CategoryController@view')->name('showCategory');
 Route::post('/regCategory', 'CategoryController@create')->name('/regCategory');
+//end category
 //item
 Route::get('/addItem', 'ItemController@index')->name('item.add');
 Route::post('/regItem', 'ItemController@create')->name('item.register');
 Route::get('/editItem', 'ItemController@editList')->name('editCategory');//show listing
 Route::post('/item/{id}/edit', 'ItemController@edit')->name('item.edit');//edit form
 Route::patch('/item/{id}', 'ItemController@update')->name('Cat.update');//update from edit
-//end category
+//end Item
 Route::post('/registerUser', 'Auth\RegisterController@create')->name('/registerUser');
 

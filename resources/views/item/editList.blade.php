@@ -52,20 +52,20 @@
 
                                         <tbody>
                                         <div class="card-body justify-content-start dropdown-btn">
-                                            @foreach($data as $cat)
+                                            @foreach($data as $item)
 
                                                 <tr>
-                                                    <td>{{$cat->id}} </td>
+                                                    <td>{{$item->id}} </td>
                                                     <div class="" style="max-width: 30px">
-                                                        <td>{{ucfirst($cat->name)}} </td>
+                                                        <td>{{ucfirst($item->name)}} </td>
                                                     </div>
-                                                    <td>{{ucfirst($cat->description)}} </td>
-                                                    <td>{{ucfirst(\App\Category::find($cat->category_id)->name??'NA')}} </td>
+                                                    <td>{{ucfirst($item->description)}} </td>
+                                                    <td>{{ucfirst(\App\Category::find($item->category_id)->name??'NA')}} </td>
                                                     <td>
-                                                    <img src="/admin/product/{{($cat->image)}} " height="50px" width="50px" />
+                                                    <img src="/storage/{{($item->image)}} " height="100px" width="100px" />
                                                     </td>
                                                     <td>
-                                                        <form method="post" action="Cat/{{$cat->id}}/edit">
+                                                        <form method="post" action="item/{{$item->id}}/edit">
                                                             @csrf
                                                             <button type="submit"
                                                                     class="btn green-button"
@@ -78,11 +78,11 @@
                                                         <td>
                                                             <li>
                                                                 <a href="#" onclick="
-                                                                    var result=confirm('Are you Sure you Want to remove {{ucfirst($cat->name)}}');
+                                                                    var result=confirm('Are you Sure you Want to remove {{ucfirst($item->name)}}');
                                                                     if(result)
                                                                     {
                                                                     event.preventDefault();
-                                                                    document.getElementById({{$cat->id}}).submit();
+                                                                    document.getElementById({{$item->id}}).submit();
                                                                     }"
 
                                                                 >
@@ -92,8 +92,8 @@
                                                                         {{ __('Delete') }}
                                                                     </button>
                                                                 </a>
-                                                                <form id="{{$cat->id}}" method="post"
-                                                                      action="{{route('Category.destroy',[$cat->id])}}"
+                                                                <form id="{{$item->id}}" method="post"
+                                                                      action="{{route('Category.destroy',[$item->id])}}"
                                                                       style="display: none">
                                                                     @csrf
                                                                     <input type="hidden" name="_method" value="delete">
@@ -122,15 +122,3 @@
         </div>
     </div>
 @endsection
-<!--
-
-                                                            <form method="post" action="Cat/{{$cat->id}}/delete">
-                                                                @csrf
-@method("Patch")
-    <button type="submit"
-            class="btn red-button"
-            style="padding-right: 35px;padding-left: 35px;border-radius: 5%;border-style: none">
-{{ __('Delete') }}
-    </button>
-</form>
--->

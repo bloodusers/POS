@@ -22,27 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="cat CRUD done">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ItemController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Item.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_14_111029_create_items_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/item/editList.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/item/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/POS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/POS.iml" afterDir="false" />
+    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="Add/Edit item">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Employee.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Organization.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Organization.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Privileges.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Privileges.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Role.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_26_114500_create_employees_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_31_111404_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_31_111404_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/category/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ItemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ItemController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/item/editList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/item/editList.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/item/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/item/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -238,7 +223,8 @@
       <workItem from="1599846083876" duration="86000" />
       <workItem from="1599864783168" duration="1474000" />
       <workItem from="1599916335122" duration="6500000" />
-      <workItem from="1599949750173" duration="20961000" />
+      <workItem from="1599949750173" duration="31038000" />
+      <workItem from="1600332753955" duration="3030000" />
     </task>
     <task id="LOCAL-00001" summary="lel">
       <created>1598268273226</created>
@@ -429,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599846142859</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Add/Edit item">
+      <created>1600155361125</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1600155361125</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,7 +459,8 @@
     <MESSAGE value="ValidateUserSession" />
     <MESSAGE value="editOrgDone" />
     <MESSAGE value="cat CRUD done" />
-    <option name="LAST_COMMIT_MESSAGE" value="cat CRUD done" />
+    <MESSAGE value="Add/Edit item" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add/Edit item" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1850" y="201" key="#Web_Browsers" timestamp="1598454354742">
@@ -515,10 +509,10 @@
     </state>
     <state x="399" y="13" width="555" height="948" key="find.popup/1280.0.1536.832/0.0.1280.984@0.0.1280.984" timestamp="1599557695583" />
     <state x="1759" y="11" width="578" height="801" key="find.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598960305128" />
-    <state x="359" y="181" width="672" height="802" key="search.everywhere.popup" timestamp="1600153609940">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1600160686241">
+      <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="359" y="181" width="672" height="802" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@0.0.1280.984" timestamp="1600153609940" />
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600105409104" />
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600160686241" />
   </component>
 </project>
