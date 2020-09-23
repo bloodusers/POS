@@ -7,7 +7,20 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
+function getFeild($f,$table,$where)
+{
+    //DB::table('categories')->where('title', 'LIKE', '%' . $request->search . "%")->get();
+    //$result=DB::table($table)->select($f)->where($where)->get();
+    $result=DB::select(DB::raw("SELECT $f FROM $table WHERE $where"));
+    $temp=array();
+    foreach ($result as $res)
+    {
+        array_push($temp,$res->id);
+    }
+    return $temp;
+}
 function ValidateUserSession($redirectOnSuccess, $privileges, $redirectOnFail = null)
 {
     if (is_array($privileges) || is_object($privileges)) {

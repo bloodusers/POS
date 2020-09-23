@@ -19,6 +19,7 @@ class CreateItemsTable extends Migration
             $table->text('description')->nullable();
             $table->string('item_code')->unique();
             $table->string('image')->nullable();
+            $table->unsignedBigInteger('price');
             $table->unsignedBigInteger('category_id');
             $table->index('category_id');
             $table->timestamps();

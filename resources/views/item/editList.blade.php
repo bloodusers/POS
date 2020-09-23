@@ -37,6 +37,9 @@
                                                 <h6 class="green-text">Category</h6>
                                             </th>
                                             <th style="text-align:center">
+                                                <h6 class="green-text">Price</h6>
+                                            </th>
+                                            <th style="text-align:center">
                                                 <h6 class="green-text">Image</h6>
                                             </th>
                                             <th style="text-align:center">
@@ -61,6 +64,7 @@
                                                     </div>
                                                     <td>{{ucfirst($item->description)}} </td>
                                                     <td>{{ucfirst(\App\Category::find($item->category_id)->name??'NA')}} </td>
+                                                    <td>{{$item->price}} </td>
                                                     <td>
                                                     <img src="/storage/{{($item->image)}} " height="100px" width="100px" />
                                                     </td>

@@ -74,9 +74,9 @@ class CategoryController extends Controller
         //dd($temp);
         if(Category::find($id)->delete()) {
             DB::select(DB::raw("ALTER TABLE categories AUTO_INCREMENT =" . 0));
-            return redirect()->route('editCategory')->with('success','Category '.$name.' deleted successfully');
+            return redirect()->route('category.edit')->with('success','Category '.$name.' deleted successfully');
         }
-        return back()->withInput()->withErrors('error','ERROR');
+        return redirect()->route('category.edit')->withErrors('error','ERROR');
        // return redirect(route('editCategory'));
     }
 

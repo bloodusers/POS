@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use function App\Http\Controllers\getFeild;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,11 +29,15 @@ Route::get('/tmp',function ()
 {
     return App\Category::with('children')->whereNull('category_id')->get();
 });
-Route::get('/tmp1',function ()
+Route::get('/chk',function ()
 {
-    return view('category.menuTreeview');
+    dd(getFeild('id','categories','organization_id ='.Auth::user()->organization_id ));
+   // return view('tempPage');
 });
-
+Route::get('/sChk',function ()
+{
+    return view('search.Search');
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -46,7 +52,7 @@ Route::get('/addOrg', 'OrganizationController@index')->name('addOrg');
 Route::post('/registerOrg', 'OrganizationController@create')->name('/registerOrg');
 //end org category
 Route::get('/addCategory', 'CategoryController@index')->name('addCategory');
-Route::get('/editCategory', 'CategoryController@editList')->name('editCategory');//show listing
+Route::get('/editCategory', 'CategoryController@editList')->name('category.edit');//show listing
 Route::post('/Cat/{id}/edit', 'CategoryController@edit')->name('/cat/{id}/edit');//edit form
 Route::delete('/Cat/{id}/delete', 'CategoryController@delete')->name('Category.destroy');//delete category
 Route::patch('/Cat/{id}', 'CategoryController@update')->name('/Cat.update');//update from controller
@@ -60,5 +66,14 @@ Route::get('/editItem', 'ItemController@editList')->name('editCategory');//show 
 Route::post('/item/{id}/edit', 'ItemController@edit')->name('item.edit');//edit form
 Route::patch('/item/{id}', 'ItemController@update')->name('Cat.update');//update from edit
 //end Item
+//search
+Route::get('/search','SearchController@search');
+//search end
+Route::get('/sChk',function ()
+{
+    return view('search.Search');
+});
+Route::get('/invoice', 'SearchController@index')->name('search.index');
+
 Route::post('/registerUser', 'Auth\RegisterController@create')->name('/registerUser');
 

@@ -22,10 +22,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="Add/Edit item">
+    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="Add/Edit item done">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/tempAjax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/search/search.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/tempPage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ItemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ItemController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_14_111029_create_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_14_111029_create_items_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/category/editList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category/editList.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/item/editList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/item/editList.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/item/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/item/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -163,22 +170,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/item" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\POS\resources\views\organization" />
-      <recent name="C:\xampp\htdocs\POS\resources\views\orgnization" />
-      <recent name="C:\xampp\htdocs\POS\resources\views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\POS\resources\views" />
       <recent name="C:\xampp\htdocs\POS\resources\views\item" />
       <recent name="C:\xampp\htdocs\POS\resources\views\category" />
       <recent name="C:\xampp\htdocs\POS\resources\views\layouts" />
       <recent name="C:\xampp\htdocs\POS\app\Http\Controllers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\POS\resources\views\organization" />
+      <recent name="C:\xampp\htdocs\POS\resources\views\orgnization" />
+      <recent name="C:\xampp\htdocs\POS\resources\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -224,7 +232,15 @@
       <workItem from="1599864783168" duration="1474000" />
       <workItem from="1599916335122" duration="6500000" />
       <workItem from="1599949750173" duration="31038000" />
-      <workItem from="1600332753955" duration="3030000" />
+      <workItem from="1600332753955" duration="5455000" />
+      <workItem from="1600420991404" duration="3413000" />
+      <workItem from="1600511505709" duration="2309000" />
+      <workItem from="1600518212086" duration="1805000" />
+      <workItem from="1600530139601" duration="2159000" />
+      <workItem from="1600611483759" duration="1576000" />
+      <workItem from="1600635049172" duration="28475000" />
+      <workItem from="1600798923206" duration="426000" />
+      <workItem from="1600857254372" duration="2505000" />
     </task>
     <task id="LOCAL-00001" summary="lel">
       <created>1598268273226</created>
@@ -422,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600155361125</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Add/Edit item done">
+      <created>1600339851944</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1600339851944</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +483,8 @@
     <MESSAGE value="editOrgDone" />
     <MESSAGE value="cat CRUD done" />
     <MESSAGE value="Add/Edit item" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add/Edit item" />
+    <MESSAGE value="Add/Edit item done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add/Edit item done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1850" y="201" key="#Web_Browsers" timestamp="1598454354742">
@@ -471,11 +495,11 @@
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1778" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1597934752829" />
-    <state x="1779" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600084076109">
+    <state x="1779" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600690712021">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="416" y="198" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1280.0.1536.832/0.0.1280.984@0.0.1280.984" timestamp="1598616487569" />
-    <state x="1779" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600084076109" />
+    <state x="1779" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600690712021" />
     <state x="1829" y="167" key="FileChooserDialogImpl" timestamp="1598454335060">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
@@ -492,10 +516,14 @@
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1884" y="335" key="NewPhpFileDialog/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598022434665" />
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1599846143904">
+    <state x="191" y="198" key="SettingsEditor" timestamp="1600768835470">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="191" y="198" key="SettingsEditor/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600768835470" />
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1600339853488">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1599846143904" />
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600339853488" />
     <state x="1866" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598442347169">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
@@ -504,15 +532,15 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="-3" y="-15" width="1296" height="555" maximized="true" key="dock-window-1/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598621911359" />
-    <state x="399" y="13" width="555" height="948" key="find.popup" timestamp="1599557695583">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state x="1759" y="11" width="578" height="801" key="find.popup" timestamp="1600693691654">
+      <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="399" y="13" width="555" height="948" key="find.popup/1280.0.1536.832/0.0.1280.984@0.0.1280.984" timestamp="1599557695583" />
-    <state x="1759" y="11" width="578" height="801" key="find.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598960305128" />
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1600160686241">
+    <state x="1759" y="11" width="578" height="801" key="find.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600693691654" />
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1600791716719">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="359" y="181" width="672" height="802" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@0.0.1280.984" timestamp="1600153609940" />
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600160686241" />
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600791716719" />
   </component>
 </project>

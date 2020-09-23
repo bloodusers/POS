@@ -72,22 +72,26 @@
                                                                     if(result)
                                                                     {
                                                                     event.preventDefault();
-                                                                    document.getElementById({{$cat->id}}).submit();
-                                                                    }"
-
-                                                                >
+                                                                    document.getElementById('delete-form').action ='{{route('Category.destroy',[$cat->id])}}';
+                                                                    document.getElementById('delete-form').submit();
+                                                                    }">
                                                                     <button type="submit"
                                                                             class="btn red-button"
                                                                             style="padding-right: 35px;padding-left: 35px;border-radius: 5%;border-style: none">
                                                                         {{ __('Delete') }}
                                                                     </button>
                                                                 </a>
-                                                                <form id="{{$cat->id}}" method="post"
-                                                                      action="{{route('Category.destroy',[$cat->id])}}"
+                                                                <form id="delete-form" method="post"
                                                                       style="display: none">
                                                                     @csrf
                                                                     <input type="hidden" name="_method" value="delete">
                                                                 </form>
+                                                                {{--<form id="{{$cat->id}}" method="post"
+                                                                      action="{{route('Category.destroy',[$cat->id])}}"
+                                                                      style="display: none">
+                                                                    @csrf
+                                                                    <input type="hidden" name="_method" value="delete">
+                                                                </form>--}}
                                                             </li>
                                                         </td>
                                                     @endif
