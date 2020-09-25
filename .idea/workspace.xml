@@ -24,8 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="invoice index done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/invoiceAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/invoiceAjax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/search/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/search/search.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +231,7 @@
       <workItem from="1600635049172" duration="28475000" />
       <workItem from="1600798923206" duration="426000" />
       <workItem from="1600857254372" duration="50927000" />
-      <workItem from="1601044414105" duration="1646000" />
+      <workItem from="1601044414105" duration="6134000" />
     </task>
     <task id="LOCAL-00001" summary="lel">
       <created>1598268273226</created>
@@ -450,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601035382871</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="invoice index done">
+      <created>1601051248464</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1601051248464</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,10 +534,10 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="191" y="198" key="SettingsEditor/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600768835470" />
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601035384568">
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601051250067">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601035384568" />
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601051250067" />
     <state x="1866" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598442347169">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
@@ -544,10 +551,10 @@
     </state>
     <state x="399" y="13" width="555" height="948" key="find.popup/1280.0.1536.832/0.0.1280.984@0.0.1280.984" timestamp="1599557695583" />
     <state x="1759" y="11" width="578" height="801" key="find.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600693691654" />
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1600884155256">
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1601052824391">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="359" y="181" width="672" height="802" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@0.0.1280.984" timestamp="1600153609940" />
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600884155256" />
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601052824391" />
   </component>
 </project>

@@ -76,27 +76,26 @@
                                                 </div>
                                                 <td>{{$user->regDate}} </td>
                                                 <td>
+                                                    <h6 id="STATUS"
                                                     @if($user->isActive)
-                                                        <h6 class="green-text">Activated</h6>
+                                                         class="green-text">Activated
                                                     @else
-                                                        <h6 class="red-text">Deactivated</h6>
+                                                        <h6 class="red-text">Deactivated
                                                     @endif
+                                                        </h6>
                                                 </td>
                                                 <td>
-                                                    <form method="post" action="/org/{{$user->id}}/changeStatus">
                                                         @csrf
-                                                        @if($user->isActive)
-                                                            <button type="submit"
-                                                                    class="btn red-button " style="">
+                                                        <button onclick="changeStatus(this,{{$user->id}});"class="btn green-button "
+                                                                @if($user->isActive)
+                                                                    style="background-color: red">
                                                                 {{ __('Deactivate') }}
-                                                            </button>
                                                         @else
-                                                            <button type="submit" class="btn green-button" style="padding-right:
-                                                            20px;padding-left: 20px">
-                                                                {{ __('  Ativate  ') }}
-                                                            </button>
+                                                            class="btn green-button" >
+                                                                {{ __('Activate') }}
+
                                                         @endif
-                                                    </form>
+                                                                </button>
                                                 </td>
                                                 <td>
                                                     <form method="post" action="org/{{$user->id}}/edit">
@@ -130,29 +129,36 @@
     </div>
 </div>
 <script type="text/javascript">
-    $('#search').on('keyup', function () {
-        $value = $(this).val();
+    function changeStatus(tag,$id) {
+        $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
         $.ajax({
-            type: 'get',
-            url: '{{URL::to('search')}}',
-            data: {'search': $value},
-            success: function (data) {
-                //$('#data').html(data);
-                if ($value) {
-                    document.getElementById("data").innerHTML = data;
-                    //document.getElementById("data").style.border = "1px solid #A5ACB2";
-                    document.getElementById("data").style.border = "1px solid rgb(255 255 255)";
-                    document.getElementById("data").style.borderRadius = "50px";
-                    document.getElementById("data").style.borderLeftWidth = "100px";
-                    document.getElementById("data").style.borderRightWidth = "100px";
-                    document.getElementById("data").style.backgroundColor = "rgb(189 187 181 / 32%)";
 
-                } else {
-                    document.getElementById("data").innerHTML = '';
+                url: "/org/" + $id+"/changeStatus",
+                type: "post",
+            data: {
+                "_token": "{{ csrf_token() }}",
+            },
+                success: function (data) {
+                    //console.log(tag.innerText);
+                    if(tag.innerText=="Activate")
+                    {
+                        // $(this).css('background-color','red');
+                        $(tag).css('background-color','red');
+                        tag.innerText="Deactivate";
+                    }else {
+                        // $(this).css('background-color','#38c695');
+                        $(tag).css('background-color','#38c695');
+                        tag.innerText="Activate";
+                    }
+
+                    //console.log(tag.className);
+                   // $(this).classList.remove('MyClass');
+
                 }
-
-            }
-        });
-    })
+            });
+    }
+</script>
+<script type="text/javascript">
+    $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
 </script>
 @endsection
