@@ -19,6 +19,11 @@ class SearchController extends Controller
         return view('search.search');
     }
 
+    public function getItemWithId($id)
+    {
+        return Item::find($id);
+    }
+
     public function search(Request $request)
     {
 
@@ -28,54 +33,12 @@ class SearchController extends Controller
                 $products = DB::table('items')->where('name', 'LIKE', '%' . $request->search . "%")->whereIn('category_id', getFeild('id', 'categories', 'organization_id =' . Auth::user()->organization_id))
                     ->get();
                 if ($products) {
-                    $output.='<table class="table table-bordered table-hover">'.
-                    '<thead>'.
-                    '<tr>'.
-                        '<th>ID</th>'.
-                        '<th>Product Name</th>'.
-                        '<th>Description</th>'.
-                        '<th>Price</th>'.
-                       '<th>Add item</th>'.
-                    '</tr>'.
-                    '</thead>'.
-                        '<tbody>';
-
                     foreach ($products as $key => $product) {
-                        $output .= '<tr>' .
-                            '<td>' . $product->id . '</td>' .
-                            '<td>' . $product->name . '</td>' .
-                            '<td>' . $product->description . '</td>' .
-                            '<td>' . $product->price . '</td>' .
-                            '<td>
-                            <li>
-                                                                <a href="#" onclick="
-                                                                    var result=confirm(\'Are you Sure you Want to remove'. ucfirst($product->name).'\');
-                                                                    if(result)
-                                                                    {
-                                                                    event.preventDefault();
-                                                                    document.getElementById('.$product->id.').submit();
-                                                                    }"
-
-                                                                >
-                                                                    <button type="submit"
-                                                                            class="btn red-button"
-                                                                            style="padding-right: 35px;padding-left: 35px;border-radius: 5%;border-style: none">
-                                                                        Add
-                                                                    </button>
-                                                                </a>
-                                                                <form id="{{$cat->id}}" method="post"
-                                                                      action="{{route(`Category.destroy`,[$cat->id])}}"
-                                                                      style="display: none">
-                                                                    @csrf
-                                                                    <input type="hidden" name="_method" value="delete">
-                                                                </form>
-                                                            </li>
-                                                            </td>' .
-                            '</tr>';
+                        if ($output)
+                            $output .= "<hr/>";
+                        $output .= "<a id='" . $product->id . "' href=# style='text-decoration: underline;' onclick='addToTable($product->id)'>" . $product->name . "</a>";
                     }
-                   $output.= '</tbody>'.
-                    '</table>';
-                   //dd($output);
+                    //dd($output);
                     return Response($output);
                 }
             }

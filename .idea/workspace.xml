@@ -22,19 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="Add/Edit item done">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/tempAjax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/search/search.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/tempPage.blade.php" afterDir="false" />
+    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="invoice Start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ItemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ItemController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_14_111029_create_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_14_111029_create_items_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/category/editList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category/editList.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/item/editList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/item/editList.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/item/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/item/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/tempAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/invoiceAjax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/search/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/search/search.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -240,7 +233,7 @@
       <workItem from="1600611483759" duration="1576000" />
       <workItem from="1600635049172" duration="28475000" />
       <workItem from="1600798923206" duration="426000" />
-      <workItem from="1600857254372" duration="2505000" />
+      <workItem from="1600857254372" duration="47774000" />
     </task>
     <task id="LOCAL-00001" summary="lel">
       <created>1598268273226</created>
@@ -445,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600339851944</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="invoice Start">
+      <created>1600860568513</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1600860568513</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +484,8 @@
     <MESSAGE value="cat CRUD done" />
     <MESSAGE value="Add/Edit item" />
     <MESSAGE value="Add/Edit item done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add/Edit item done" />
+    <MESSAGE value="invoice Start" />
+    <option name="LAST_COMMIT_MESSAGE" value="invoice Start" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1850" y="201" key="#Web_Browsers" timestamp="1598454354742">
@@ -520,10 +521,10 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="191" y="198" key="SettingsEditor/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600768835470" />
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1600339853488">
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1600860636586">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600339853488" />
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600860636586" />
     <state x="1866" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598442347169">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
@@ -537,10 +538,10 @@
     </state>
     <state x="399" y="13" width="555" height="948" key="find.popup/1280.0.1536.832/0.0.1280.984@0.0.1280.984" timestamp="1599557695583" />
     <state x="1759" y="11" width="578" height="801" key="find.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600693691654" />
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1600791716719">
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1600884155256">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="359" y="181" width="672" height="802" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@0.0.1280.984" timestamp="1600153609940" />
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600791716719" />
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600884155256" />
   </component>
 </project>

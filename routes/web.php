@@ -74,6 +74,7 @@ Route::get('/sChk',function ()
     return view('search.Search');
 });
 Route::get('/invoice', 'SearchController@index')->name('search.index');
+Route::get('/getItem/{id}', 'SearchController@getItemWithId')->name('search.item');
 
 Route::post('/registerUser', 'Auth\RegisterController@create')->name('/registerUser');
 
