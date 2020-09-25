@@ -22,13 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="invoice Start">
+    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="invoice index done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/tempAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/invoiceAjax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/invoiceAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/invoiceAjax.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/search/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/search/search.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +230,8 @@
       <workItem from="1600611483759" duration="1576000" />
       <workItem from="1600635049172" duration="28475000" />
       <workItem from="1600798923206" duration="426000" />
-      <workItem from="1600857254372" duration="47774000" />
+      <workItem from="1600857254372" duration="50927000" />
+      <workItem from="1601044414105" duration="1646000" />
     </task>
     <task id="LOCAL-00001" summary="lel">
       <created>1598268273226</created>
@@ -445,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600860568513</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="invoice index done">
+      <created>1601035382871</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1601035382871</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,7 +490,8 @@
     <MESSAGE value="Add/Edit item" />
     <MESSAGE value="Add/Edit item done" />
     <MESSAGE value="invoice Start" />
-    <option name="LAST_COMMIT_MESSAGE" value="invoice Start" />
+    <MESSAGE value="invoice index done" />
+    <option name="LAST_COMMIT_MESSAGE" value="invoice index done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1850" y="201" key="#Web_Browsers" timestamp="1598454354742">
@@ -521,10 +527,10 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="191" y="198" key="SettingsEditor/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600768835470" />
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1600860636586">
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601035384568">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600860636586" />
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601035384568" />
     <state x="1866" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598442347169">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>

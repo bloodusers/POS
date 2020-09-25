@@ -60,6 +60,8 @@
             </div>
         </div>
     </div>
+    <input id="subTotal" type="number" size="1" min="1" readonly style="margin-left: 800px"/>
+
     <script type="text/javascript">
         $('#search').on('keyup', function () {
             $value = $(this).val();

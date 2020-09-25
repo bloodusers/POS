@@ -129,4 +129,30 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    $('#search').on('keyup', function () {
+        $value = $(this).val();
+        $.ajax({
+            type: 'get',
+            url: '{{URL::to('search')}}',
+            data: {'search': $value},
+            success: function (data) {
+                //$('#data').html(data);
+                if ($value) {
+                    document.getElementById("data").innerHTML = data;
+                    //document.getElementById("data").style.border = "1px solid #A5ACB2";
+                    document.getElementById("data").style.border = "1px solid rgb(255 255 255)";
+                    document.getElementById("data").style.borderRadius = "50px";
+                    document.getElementById("data").style.borderLeftWidth = "100px";
+                    document.getElementById("data").style.borderRightWidth = "100px";
+                    document.getElementById("data").style.backgroundColor = "rgb(189 187 181 / 32%)";
+
+                } else {
+                    document.getElementById("data").innerHTML = '';
+                }
+
+            }
+        });
+    })
+</script>
 @endsection
