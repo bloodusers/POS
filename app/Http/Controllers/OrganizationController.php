@@ -67,11 +67,9 @@ class OrganizationController extends Controller
         $user = Organization::findOrFail($user);
         $user->isActive = !$user->isActive;
         $user->push();
-        // return redirect(route('adminPage'));
-        return redirect()->back()->with('Success', 'Status successfully!');
-        //dd(($user));
-        //return view(route('adminPage'));
-        //return view('admin.index');
+        sleep(2);
+        return $user->isActive;
+        //return redirect()->back()->with('Success', 'Status successfully!');
     }
     public function create()
     {
