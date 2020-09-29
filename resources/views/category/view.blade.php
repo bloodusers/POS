@@ -3,59 +3,57 @@
 
 @section('content')
 
-
-    <!--
-    <div class="container-md step-box-left diffuse-shadow red-line-bottom white-bg wow fadeInLeft">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class=" row card-header offset-8">
-                        <div class="content-area">
-
-                            <h2 class="green-text"> {{ __('Categories') }}</h2>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        @if (session('status'))
-        <div class="alert alert-success" role="alert">
-{{ session('status') }}
-            </div>
-@endif
-
-        </div>
+<br/>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+        </ul>
     </div>
-
-</div>
-</div>
-</div>
--->
-
+</nav>
     <!--new-->
+    <div class="row">
+        <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
 
-    <div class="sidenav " style="margin-top: 70px;;font-size: smaller">
+                @foreach($data as $cat)
 
-        @foreach($data as $cat)
-
-            <button class="dropdown-btn">{{ucfirst($cat->name)}}
-                <i class="fa fa-caret-down">
-                </i>
-            </button>
-            <div class="dropdown-container">
-                @foreach($cat->children as $subCat)
-                    <button class="dropdown-btn">--{{ucfirst($subCat->name)}}
-
-                        <i class="fa fa-caret-down"></i>
+                    <button class="dropdown-btn">{{ucfirst($cat->name)}}
+                        <i class="fa fa-caret-down">
+                        </i>
                     </button>
                     <div class="dropdown-container">
-                        @foreach($subCat->children as $mod)
-                            <button class="dropdown-btn">---{{ucfirst($mod->name)}}
+                        @foreach($cat->children as $subCat)
+                            <button class="dropdown-btn">--{{ucfirst($subCat->name)}}
+
                                 <i class="fa fa-caret-down"></i>
                             </button>
+                            <div class="dropdown-container">
+                                @foreach($subCat->children as $mod)
+                                    <button class="dropdown-btn">---{{ucfirst($mod->name)}}
+                                        <i class="fa fa-caret-down"></i>
+                                    </button>
+                                @endforeach
+                            </div>
                         @endforeach
                     </div>
-                @endforeach
             </div>
+        </div>
         @endforeach
     </div>
     <!--new-->
@@ -75,31 +73,6 @@
             });
         }
     </script>
+
 @endsection
 
-<!--
-@foreach($data as $cat)
-    <button class="dropdown-btn"style="margin-top: 200px ;padding-right: 20px">{{$cat->name}}
-        <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-container">
-        @foreach($cat->children as $subCat)
-        <button class="dropdown-btn"style="margin-top: 200px ;padding-right: 20px">{{$subCat->name}}
-            <i class="fa fa-caret-down"></i>
-        </button>
-@endforeach
-        </div>
-@endforeach
-
-
-    -->
-<!--
- @if($canEdit??'')
-    <button type="submit"
-            class="dropdown-btn"
-            style="padding-top: 0.5px;padding-bottom: 0.5px;padding-right: 2px;padding-left: 2px;border-radius: 5%;border-style: none;margin-left: 0px;
-            background-color: #17a2b8";>
-{{ __('Edit') }}
-        </button>
-@endif
-    -->

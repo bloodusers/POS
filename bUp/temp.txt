@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-md navbar-left bg-white shadow-sm ">
+        <div class="  navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+
+                    <!--- NAVBAR EXPAND COLLAPSE ON MOBILE -->
+                    <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#posNav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon icon-menu"></span>
+                    </button>
+
+                    <!--- LOGO -->
+                    <a class="navbar-brand" href="{{route('welcome')}}">
+                        <img src="{{ asset('images/newLog.png') }}" width="50" height="50" alt="LOGO">
+                    </a>
+
+                </div>
+
+                <div class="navbar-collapse collapse" id="posNav">
+                    <!--- NAVIGATION LINK -->
+                    <ul class="nav navbar-nav navbar-right main-navigation mr-auto " id="internal-scroll">
+                        <li class="nav-item "><a href="{{route('home')}}">Home</a>
+                        </li>
+                        <li class="nav-item"><a href="#section1">About</a>
+                        </li>
+                        <li class="nav-item"><a href="#section2">Services</a>
+                        </li>
+                        <li class="nav-item"><a href="#section4">Team</a>
+                        </li>
+                        <li class="nav-item"><a href="#section10">Contact</a>
+                        </li>
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('   Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                          style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                    @endguest
+
+                    <!--- <li><a href="http://example.com" class="external">External Link Example</a></li> -->
+                    </ul>
+                </div>
+
+            </div>
+            <!--- /END CONTAINER -->
+        </div>
+
+    </nav>
+    <!--- /END NAIVATION -->
