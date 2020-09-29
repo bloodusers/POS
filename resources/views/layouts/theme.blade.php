@@ -1,91 +1,5 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>POS</title>
-
-
-    <!--- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-    <!--- Styles -->
-    <style>
-        html, body {
-            background-color: #fff;
-            color: #636b6f;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 200;
-            margin-top: 50px;
-        }
-
-        .full-height {
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
-        .content {
-            text-align: center;
-        }
-
-        .title {
-            font-size: 84px;
-        }
-        .links > a {
-            color: #636b6f;
-            padding: 0 25px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-
-        .m-b-md {
-            margin-bottom: 30px;
-        }
-    </style>
-
-    <!---new -->
-
-    <!--<link rel="icon" href="{{ asset('images/favicons/favicon.icon') }}'">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ asset('images/favicons/favicon-152.png') }}">
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ asset('images/favicons/favicon-120.png') }}">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('images/favicons/ favicon-72.png' )}}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('images/favicons/favicon-57.png' )}}">-->
-    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,600|Poppins:400,500,700' rel='stylesheet'
-          type='text/css'>
-
-    <!--- ICON FONT -->
-    <link rel="stylesheet" href="{{ asset('assets/icons/styles.css' )}}">
-
-    <!--- Third Party CSS including Bootstrap -->
-    <link rel="stylesheet" href="{{ asset('css/third-party.css' )}}">
-
-    <!--- STYLESHEETS -->
-    <link rel="stylesheet" href="{{ asset('css/styles.css' )}}">
-    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
-
-
-    <!---new -->
-
-</head>
 <body>
 <div id="app">
     <!--- NAVIGATION -->
@@ -174,12 +88,114 @@
         <!-- =========================
          JS SCRIPTS
         ============================== -->
+        <script>
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+        </script>
         @yield('content')
     </main>
 </div>
 
 
 </body>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>POS</title>
+
+
+    <!--- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <!--- Styles -->
+    <style>
+        html, body {
+            background-color: #fff;
+            color: #636b6f;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 200;
+            margin-top: 50px;
+        }
+
+        .full-height {
+        }
+
+        .flex-center {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .position-ref {
+            position: relative;
+        }
+
+        .top-right {
+            position: absolute;
+            right: 10px;
+            top: 18px;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .title {
+            font-size: 84px;
+        }
+        .links > a {
+            color: #636b6f;
+            padding: 0 25px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+
+        .m-b-md {
+            margin-bottom: 30px;
+        }
+    </style>
+
+    <!---new -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+
+    <!---new -->
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,600|Poppins:400,500,700' rel='stylesheet'
+          type='text/css'>
+
+    <!--- ICON FONT -->
+    <link rel="stylesheet" href="{{ asset('assets/icons/styles.css' )}}">
+
+    <!--- Third Party CSS including Bootstrap -->
+    <link rel="stylesheet" href="{{ asset('css/third-party.css' )}}">
+
+    <!--- STYLESHEETS -->
+    <link rel="stylesheet" href="{{ asset('css/styles.css' )}}">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+
+
+    <!--new-->
+{{--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>--}}
+<!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+</head>
 </html>
 
 

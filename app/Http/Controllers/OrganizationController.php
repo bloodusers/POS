@@ -67,7 +67,7 @@ class OrganizationController extends Controller
         $user = Organization::findOrFail($user);
         $user->isActive = !$user->isActive;
         $user->push();
-        sleep(2);
+        //sleep(2);
         return $user->isActive;
         //return redirect()->back()->with('Success', 'Status successfully!');
     }

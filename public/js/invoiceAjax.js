@@ -22,6 +22,7 @@ function addToTable($id) {
                 var row = $("#SampleDataRow").clone();
                 var Sr = $("#ItemTableBody .DataRow").length + 1;
                 $(row).find(".Serial").html(Sr);
+                $(row).find(".id").html(obj.id);
                 $(row).find(".ItemDescription").html(obj.name);
                 $(row).find(".Price").html(obj.price);
                 $(row).find(".Total").val(obj.price * 1);
@@ -36,12 +37,18 @@ function addToTable($id) {
     });
 }
 
-function ReCalculateSerialNumbers() {
-    var Sr = 1;
-    $("#ItemTableBody .DataRow").each(function () {
-        $(this).find(".Serial").html(Sr);
-        Sr++;
-    });
+function changeTotal(tag) {
+    //CalculateInvoiceTotals();
+    let total = parseInt($("#total").val());
+    if (total) {
+        let val = parseInt($(tag).val());
+        if (!val)
+            val = 0;
+        if (val <= total) {
+            total -= val;
+            $("#subTotal").val(total);
+        }
+    }
 }
 
 function RemoveItem(tag) {
@@ -77,5 +84,92 @@ function CalculateInvoiceTotals() {
         var totalForItem = $(this).find(".Total").val();
         total += parseFloat(totalForItem);
     });
+    document.getElementById("total").value = total;
     document.getElementById("subTotal").value = total;
+    changeTotal($('#discount'))
 }
+
+function ReCalculateSerialNumbers() {
+    var Sr = 1;
+    $("#ItemTableBody .DataRow").each(function () {
+        $(this).find(".Serial").html(Sr);
+        Sr++;
+    });
+}
+
+function addInvoice($userId) {
+    console.log($('#tName').val());
+    let token = $('#tName').val();
+    var table = document.getElementById("invoiceList").getElementsByTagName('tbody')[0];
+    var row = table.rows.length;
+
+    console.log(data);
+    for (let i = 1; i <= row; i++) {
+        console.log(document.getElementById("invoiceList").rows[i].cells[1].innerHTML);
+    }
+
+    $.ajax({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        url: "/addInvoice",
+        type: "post",
+        data: {_token: token,  "customerName" :$('#customerName').val(),
+            "remarks" : $('#remarks').val() ,
+            "totalAmount" : parseInt($('#total').val()) ,
+            "totalItems" : parseInt(row) ,
+            "discount" : parseInt($('#discount').val()) ,
+            "payableAmount" : parseInt($('#subTotal').val()) ,},
+        success: function (response) {
+            if (response) {
+                let id=response;
+                $("#ItemTableBody .DataRow").each(function ()
+                {
+                    $.ajax({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        url: "/addInvoiceItem",
+                        type: "post",
+                        data: {
+                            _token: token, "invoice_id": id,
+                            "item_id": ($(this).parent().find(".id").text()),
+                            "qty": parseInt($(this).find(".Qty").val()),
+                            "price": (parseInt($(this).parent().find(".Price").text())),
+                            "returnQty": parseInt(1),
+                        },
+                        success: function (response) {
+                            if (response) {
+                                console.log('done');
+                                console.log(response);
+                            }
+                        }
+                        ,
+                    });
+                })
+            }
+        }
+        ,
+    });
+}
+
+/*
+var data = '[' +
+    '{"customerName":"' + $('#customerName').val() + '"}' +
+    '{"remarks":"' + $('#remarks').val() + '"}' +
+    '{"total":"' + $('#total').val() + '"}' +
+    '{"totalItems":"' + row + '"}' +
+    '{"discount":"' + $('#discount').val() + '"}' +
+    '{"payableAmount":"' + $('#subTotal').val() + '"}' +
+    ']';*/
+
+/*
+var data = {
+        "customerName" :$('#customerName').val(),
+    "remarks" : $('#remarks').val() ,
+    "total" : $('#total').val() ,
+    "totalItems" : row ,
+    "discount" : $('#discount').val() ,
+    "payableAmount" : $('#subTotal').val() ,
+    };
+*/

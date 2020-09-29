@@ -23,13 +23,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="invoice index done&amp;&amp; status switch using ajax done">
-      <change afterPath="$PROJECT_DIR$/app/Invoice.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_27_135119_create_invoices_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/spinner-small.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/InvoiceController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/InvoiceItemController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/InvoiceItem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_28_131804_create_invoice_items_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/AUTHORS.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/external/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/images/ui-icons_444444_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/images/ui-icons_555555_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/images/ui-icons_777620_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/images/ui-icons_777777_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/images/ui-icons_cc0000_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/images/ui-icons_ffffff_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/jquery-ui.structure.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/jquery-ui.structure.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/jquery-ui.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/jquery-ui.theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/body.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrganizationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrganizationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Invoice.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Invoice.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_27_135119_create_invoices_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_27_135119_create_invoices_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/invoiceAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/invoiceAjax.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/theme.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/theme.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/search/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/search/search.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +192,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -176,11 +204,11 @@
       <recent name="C:\xampp\htdocs\POS\resources\views" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\POS\public" />
+      <recent name="C:\xampp\htdocs\POS\resources\views\layouts" />
       <recent name="C:\xampp\htdocs\POS\public\images" />
       <recent name="C:\xampp\htdocs\POS\resources\views" />
       <recent name="C:\xampp\htdocs\POS\resources\views\item" />
-      <recent name="C:\xampp\htdocs\POS\resources\views\category" />
-      <recent name="C:\xampp\htdocs\POS\resources\views\layouts" />
     </key>
   </component>
   <component name="RunManager">
@@ -237,7 +265,7 @@
       <workItem from="1600857254372" duration="50927000" />
       <workItem from="1601044414105" duration="6321000" />
       <workItem from="1601127912655" duration="8712000" />
-      <workItem from="1601159731178" duration="6051000" />
+      <workItem from="1601159731178" duration="42386000" />
     </task>
     <task id="LOCAL-00001" summary="lel">
       <created>1598268273226</created>
@@ -470,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601061176263</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="invoice index done&amp;&amp; status switch using ajax done">
+      <created>1601227661252</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1601227661252</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,11 +558,11 @@
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1778" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1597934752829" />
-    <state x="1779" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600690712021">
+    <state x="1779" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601387748674">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="416" y="198" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1280.0.1536.832/0.0.1280.984@0.0.1280.984" timestamp="1598616487569" />
-    <state x="1779" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600690712021" />
+    <state x="1779" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601387748674" />
     <state x="1829" y="167" key="FileChooserDialogImpl" timestamp="1598454335060">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
@@ -548,10 +583,10 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="191" y="198" key="SettingsEditor/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600768835470" />
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601061181933">
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601227662404">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601061181933" />
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601227662404" />
     <state x="1866" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598442347169">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
@@ -565,10 +600,10 @@
     </state>
     <state x="399" y="13" width="555" height="948" key="find.popup/1280.0.1536.832/0.0.1280.984@0.0.1280.984" timestamp="1599557695583" />
     <state x="1759" y="11" width="578" height="801" key="find.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1600693691654" />
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1601222337278">
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1601394336503">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="359" y="181" width="672" height="802" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@0.0.1280.984" timestamp="1600153609940" />
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601222337278" />
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601394336503" />
   </component>
 </project>

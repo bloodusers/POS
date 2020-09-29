@@ -26,7 +26,7 @@ class SearchController extends Controller
 
     public function search(Request $request)
     {
-
+        $data=array();
         if ($request->ajax()) {
             if ($request->search) {
                 $output = "";
@@ -34,11 +34,13 @@ class SearchController extends Controller
                     ->get();
                 if ($products) {
                     foreach ($products as $key => $product) {
+
                         if ($output)
                             $output .= "<hr/>";
                         $output .= "<a id='" . $product->id . "' href=# style='text-decoration: underline;' onclick='addToTable($product->id)'>" . $product->name . "</a>";
+                        array_push($data,$product->name);
                     }
-                    //dd($output);
+//                    dd();
                     return Response($output);
                 }
             }

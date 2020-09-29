@@ -1,7 +1,7 @@
 @extends('layouts.theme')
 
-@section('content')
 
+@section('content')
     <div class="card">
         @if (session('status'))
             <div class="alert alert-success" role="alert">
