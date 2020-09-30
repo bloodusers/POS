@@ -16,7 +16,7 @@
                     @endif
                 </h2>
 
-                <div class="card-body">
+                <div class="card-body justify-content-center">
                     <form method="POST" enctype="multipart/form-data"
                           @if($info ?? '')
                           action="/item/{{$info->id}}"
@@ -88,10 +88,10 @@
                             </div>
                         </div>
                         <!--img-->
-                        <div>
-                            <strong><label for="image"
+                        <div class="d-inline">
+                            <strong><label class="d-inline" for="image"
                                            class="col-md-4 col-form-label text-md-right">{{ __('Add an Image') }}</label></strong>
-                            <input type="file" accept="image/*"
+                            <input class="d-inline" type="file" accept="image/*"
                                    @if($info??'')
                                    value="/storage/{{($info->image??'')}}"
                                    @endif
@@ -120,22 +120,15 @@
                                 @endforeach
                             @endforeach
                         </select>
+                        <!--new-->
+                                <button type="submit" class="btn btn-primary justify-content-center">
+                                    @if($info->id ?? '')
+                                        {{ __('edit item') }}
+                                    @else
+                                        {{ __('add item') }}
+                                    @endif
+                                </button>
                 </div>
-
-
-                <!--new-->
-                <div class="">
-                    <div class="">
-                        <button type="submit" class="btn btn-default standard-button green-button">
-                            @if($info->id ?? '')
-                                {{ __('edit item') }}
-                            @else
-                                {{ __('add item') }}
-                            @endif
-                        </button>
-                    </div>
-                </div>
-
                 </form>
             </div>
         </div>

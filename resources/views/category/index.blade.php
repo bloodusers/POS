@@ -7,15 +7,16 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <h2>
-                    @if($info ?? '')
-                        <div class="card-header">{{ __('Edit category') }}</div>
-                    @else
-                        <div class="card-header">{{ __('Add category') }}</div>
-                    @endif
-                </h2>
-
-                <div class="card-body">
+                <div class="card-header">
+                    <h2>
+                        @if($info ?? '')
+                            <div class="card-header">{{ __('Edit category') }}</div>
+                        @else
+                            <div class="card-header">{{ __('Add category') }}</div>
+                        @endif
+                    </h2>
+                </div>
+                <div class="card-body justify-content-center">
                     <form method="POST"
                           @if(!($info ?? ''))
                           action="{{ route('/regCategory') }}"
@@ -43,49 +44,44 @@
                             </div>
                         </div>
                         <!--description-->
-
-                        </div>
                         <!--new-->
-
-                        <label for="category_id">Select parent category:</label>
-                        <select id="category_id" name="category_id">
-                            <option value="">NONE</option>
-                            @foreach($data as $cat)
-                                <option value={{$cat->id}}
-                                @if($info??'')
-                                @if($cat->id==$info->category_id??'')
-                                    selected='selected'
-                                    @endif
-                                    @endif>{{ucfirst($cat->name)}}</option>
-                                @foreach($cat->children as $subCat)
-                                    <option value={{$subCat->id}}
+                        <div class="justify-content-center">
+                            <label for="category_id">Select parent category:</label>
+                            <select id="category_id" name="category_id">
+                                <option value="">NONE</option>
+                                @foreach($data as $cat)
+                                    <option value={{$cat->id}}
                                     @if($info??'')
-                                    @if($subCat->id==$info->category_id)
+                                    @if($cat->id==$info->category_id??'')
                                         selected='selected'
                                         @endif
-                                        @endif>--{{ucfirst($subCat->name)}}</option>
+                                        @endif>{{ucfirst($cat->name)}}</option>
+                                    @foreach($cat->children as $subCat)
+                                        <option value={{$subCat->id}}
+                                        @if($info??'')
+                                        @if($subCat->id==$info->category_id)
+                                            selected='selected'
+                                            @endif
+                                            @endif>--{{ucfirst($subCat->name)}}</option>
+                                    @endforeach
                                 @endforeach
-                            @endforeach
-                        </select>
-
+                            </select>
+                        </div>
 
                         <!--new-->
-                        <div class="">
-                            <div class="">
-                                <button type="submit" class="btn btn-default standard-button green-button">
+                                <button type="submit" class="btn btn-primary justify-content-center" >
                                     @if($info->id ?? '')
                                         {{ __('edit category') }}
                                     @else
                                         {{ __('add category') }}
                                     @endif
                                 </button>
-                            </div>
-                        </div>
 
                     </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection

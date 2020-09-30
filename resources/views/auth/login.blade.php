@@ -6,10 +6,10 @@
 <div class="container ">
     <div class="row justify-content-lg-start">
         <div class="col-md-8 align-content-lg-start">
-            <div class="card">
+            <div class="card ">
                <h2> <div class="card-header">{{ __('Login') }}</div></h2>
 
-                <div class="card-body text-md-left">
+                <div class="card-body  ">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -28,7 +28,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-left">{{ __('Password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password" placeholder="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
@@ -40,7 +40,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="form-group row mb-0">
+                        <div class="form-group row mb-0 justify-content-center">
                             <div class="col-md-0 offset-md-0">
                                 <div class="form-check ">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -52,9 +52,9 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0 ">
+                        <div class="form-group row mb-0 justify-content-center">
                             <div class="col-md-0 offset-md-0 ">
-                                <button type="submit" class="btn btn-default standard-button green-button"  >
+                                <button type="submit" class="btn btn-primary"  >
                                     {{ __('Login') }}
                                 </button>
 

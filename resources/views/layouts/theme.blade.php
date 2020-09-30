@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>POS</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
+    <script src="https://unpkg.com/jquery@2.2.4/dist/jquery.js"></script>
 
 
 
@@ -97,6 +97,7 @@
     </nav>
 
     <main class="py-0">
+
         @yield('content')
     </main>
 </div>

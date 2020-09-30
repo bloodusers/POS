@@ -125,6 +125,9 @@ function addInvoice($userId) {
                 let id=response;
                 $("#ItemTableBody .DataRow").each(function ()
                 {
+                    /*console.log(($(this).find(".id").text()));
+                    console.log(parseInt($(this).find(".Qty").val()));
+                    console.log((parseInt($(this).find(".Price").text())));*/
                     $.ajax({
                         headers: {
                             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -133,15 +136,16 @@ function addInvoice($userId) {
                         type: "post",
                         data: {
                             _token: token, "invoice_id": id,
-                            "item_id": ($(this).parent().find(".id").text()),
+                            "item_id": ($(this).find(".id").text()),
                             "qty": parseInt($(this).find(".Qty").val()),
-                            "price": (parseInt($(this).parent().find(".Price").text())),
+                            "price": (parseInt($(this).find(".Price").text())),
                             "returnQty": parseInt(1),
                         },
                         success: function (response) {
                             if (response) {
                                 console.log('done');
                                 console.log(response);
+                                location.reload(true);
                             }
                         }
                         ,

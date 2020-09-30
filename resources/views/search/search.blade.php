@@ -9,7 +9,7 @@
             <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-sm">Search</span>
             </div>
-            <input id="search" onkeyup="fillData(this)" onchange="fillData(this)" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            <input id="search" list="sList" onkeyup="fillData(this)" onchange="fillData(this)" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div id="data" style="border-radius: 1px;border-color: #21252900"></div>
         <div class="card-header">
@@ -159,8 +159,12 @@
         <!--total/discount/cName/remarks-->
     </div>
 @endsection
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<link href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel ="Stylesheet">
 <script type="text/javascript">
-    function fillData(tag) {
+    function fillData(tag)
+    {
         $value = $(tag).val();
         $.ajax({
             type: 'get',
@@ -183,6 +187,34 @@
 
             }
         });
+       /* $("#search").autocomplete({
+            //source: "/?searchText=" + $("#ItemSearch").val(),
+            minLength: 2,
+            autoFocus: true,
+            source: function (request, response) {
+                $.ajax({
+                    type: 'get',
+                    url: '{{URL::to('search')}}',
+                    data: {'search': $value},
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return {
+                                label: item.name,
+                                value: item.id,
+                                ItemPrice: item.price
+                            };
+                        }));
+                    },
+                });
+            },
+
+            select: function (event, ui) {
+                addToTable(ui.item.id);
+                $("#search").val('');
+                return false;
+                //log( "Selected: " + ui.item.value + " aka " + ui.item.id );
+            }
+        });*/
     }
 </script>
 

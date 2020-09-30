@@ -37,7 +37,7 @@ class SearchController extends Controller
 
                         if ($output)
                             $output .= "<hr/>";
-                        $output .= "<a id='" . $product->id . "' href=# style='text-decoration: underline;' onclick='addToTable($product->id)'>" . $product->name . "</a>";
+                        $output .= "<a class=\"justify-content-center\" id='" . $product->id . "' href=# style='text-decoration: underline;' onclick='addToTable($product->id)'>" . $product->name . "</a>";
                         array_push($data,$product->name);
                     }
 //                    dd();
@@ -46,4 +46,5 @@ class SearchController extends Controller
             }
         }
     }
+
 }
