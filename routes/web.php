@@ -36,7 +36,7 @@ Route::get('/chk',function ()
 });
 Route::get('/sChk',function ()
 {
-    return view('search.Search');
+    return view('invoice.Search');
 });
 Auth::routes();
 
@@ -65,16 +65,19 @@ Route::post('/regItem', 'ItemController@create')->name('item.register');
 Route::get('/editItem', 'ItemController@editList')->name('editCategory');//show listing
 Route::post('/item/{id}/edit', 'ItemController@edit')->name('item.edit');//edit form
 Route::patch('/item/{id}', 'ItemController@update')->name('Cat.update');//update from edit
+Route::delete('/item/{id}/delete', 'ItemController@delete')->name('item.destroy');//delete category
 //end Item
-//search
-Route::get('/search','SearchController@search');
-//search end
+//invoice
+Route::get('/invoice','SearchController@invoice');
+//invoice end
 Route::get('/sChk',function ()
 {
-    return view('search.Search');
+    return view('invoice.Search');
 });
-Route::get('/invoice', 'SearchController@index')->name('search.index');
-Route::get('/getItem/{id}', 'SearchController@getItemWithId')->name('search.item');
+Route::get('/search', 'SearchController@search')->name('search.search');
+Route::get('/getItem/{id}', 'SearchController@getItemWithId')->name('invoice.item');
+Route::get('/invoice', 'InvoiceController@index')->name('invoice.index');
+Route::get('/invoice/{id}/receipt', 'InvoiceController@receipt')->name('invoice.receipt');//receipt
 Route::post('/addInvoice', 'InvoiceController@create')->name('invoice.add');
 Route::post('/addInvoiceItem', 'InvoiceItemController@create')->name('invoiceItem.add');
 

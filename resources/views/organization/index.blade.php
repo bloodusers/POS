@@ -15,7 +15,7 @@
                     @endif
                 </h2>
                 <div class="card-body">
-                    <form method="POST"
+                    <form method="POST" enctype="multipart/form-data"
                           @if(!($data ?? ''))
                           action="{{ route('/registerOrg') }}"
                           @else
@@ -107,18 +107,30 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="">
-                            <div class="">
-                                <button type="submit" class="btn btn-default standard-button green-button">
+                        <!--logo-->
+                        <div class="col text-center">
+                            <strong><label class="d-inline" for="logo"
+                                           class="col-md-4 col-form-label text-md-right">{{ __('Add Logo') }}</label></strong>
+                            <input class="d-inline" type="file" accept="image/*"
+                                   @if($info??'')
+                                   value="/storage/{{($info->image??'')}}"
+                                   @endif
+                                   class="form-control-file" id="logo" name="logo">
+                            @error('logo')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                        </div>
+                        <div class="col text-center">
+                                <button type="submit" class="btn btn-primary justify-content-center">
                                     @if($data??'')
                                     {{ __('Update') }}
                                     @else
                                     {{ __('Register') }}
                                     @endif
                                 </button>
-                            </div>
                         </div>
-
                     </form>
                 </div>
             </div>

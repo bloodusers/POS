@@ -14,19 +14,9 @@ class Organization extends Model
      *
      * @var array
      */
-    /* protected $guarded = [
-         'name' => 'required',
-         'shortName' => 'required',
-         'contactPerson' => 'required',
-         'contact' => 'required|min:11|numeric',
-         'email' => 'required|email:rfc,dns',
-         'regDate' => 'required',
-         'password' => 'required',
-         'password_confirmation' => 'required',
-     ];*/
 
     protected $fillable = [
-        'name', 'email', 'password','shortName', 'contactPerson', 'contact', 'regDate',
+        'name', 'email', 'password','shortName', 'contactPerson', 'contact', 'regDate', 'logo',
     ];
 
     /**

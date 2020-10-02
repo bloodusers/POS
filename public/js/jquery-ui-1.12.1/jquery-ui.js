@@ -4175,7 +4175,7 @@ var labels = $.fn.labels = function() {
 	id = this.attr( "id" );
 	if ( id ) {
 
-		// We don't search against the document in case the element
+		// We don't invoice against the document in case the element
 		// is disconnected from the DOM
 		ancestor = this.eq( 0 ).parents().last();
 
@@ -5410,7 +5410,7 @@ var widgetsMenu = $.widget( "ui.menu", {
 	},
 
 	// With no arguments, closes the currently active menu - if nothing is active
-	// it closes all menus.  If passed an argument, it will search for menus BELOW
+	// it closes all menus.  If passed an argument, it will invoice for menus BELOW
 	_close: function( startMenu ) {
 		if ( !startMenu ) {
 			startMenu = this.active ? this.active.parent() : this.element;
@@ -5631,7 +5631,7 @@ $.widget( "ui.autocomplete", {
 		// Unfortunately the code for & in keypress is the same as the up arrow,
 		// so we use the suppressKeyPressRepeat flag to avoid handling keypress
 		// events when we know the keydown event was used to modify the
-		// search term. #7799
+		// invoice term. #7799
 		var suppressKeyPress, suppressKeyPressRepeat, suppressInput,
 			nodeName = this.element[ 0 ].nodeName.toLowerCase(),
 			isTextarea = nodeName === "textarea",
@@ -5712,7 +5712,7 @@ $.widget( "ui.autocomplete", {
 				default:
 					suppressKeyPressRepeat = true;
 
-					// search timeout should be triggered before the input value is changed
+					// invoice timeout should be triggered before the input value is changed
 					this._searchTimeout( event );
 					break;
 				}
@@ -6212,7 +6212,7 @@ $.extend( $.ui.autocomplete, {
 $.widget( "ui.autocomplete", $.ui.autocomplete, {
 	options: {
 		messages: {
-			noResults: "No search results.",
+			noResults: "No invoice results.",
 			results: function( amount ) {
 				return amount + ( amount > 1 ? " results are" : " result is" ) +
 					" available, use up and down arrow keys to navigate.";

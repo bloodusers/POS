@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 
 function getFeild($f,$table,$where)
 {
-    //DB::table('categories')->where('title', 'LIKE', '%' . $request->search . "%")->get();
+    //DB::table('categories')->where('title', 'LIKE', '%' . $request->invoice . "%")->get();
     //$result=DB::table($table)->select($f)->where($where)->get();
     $result=DB::select(DB::raw("SELECT $f FROM $table WHERE $where"));
     $temp=array();

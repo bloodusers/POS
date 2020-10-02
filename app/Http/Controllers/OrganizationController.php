@@ -55,11 +55,15 @@ class OrganizationController extends Controller
                 'shortName' => 'required',
                 'contactPerson' => 'required',
                 'contact' => 'required|min:11|numeric',
+                'logo' => '',
                 'email' => 'required|email:rfc,dns',
             ]
         );
+        if ($data['logo'] ?? '') {
+            $imagePath = $data['logo']->store('uploads', 'public');
+            $data['logo'] = $imagePath;
+        }
         Organization::where('id',$id)->update($data);
-       //dd(Organization::find($id));
         return redirect(route('adminPage'));
     }
     public function toggleStatus($user)
@@ -73,20 +77,25 @@ class OrganizationController extends Controller
     }
     public function create()
     {
+       // dd(\request()->all());
         $data = \request()->validate(
             [
                 'name' => 'required',
                 'shortName' => 'required',
                 'contactPerson' => 'required',
                 'contact' => 'required|min:11|numeric',
+                'logo' => '',
                 'email' => 'required|email:rfc,dns',
             ]
         );
-        //date("Y-m-d")
+        //dd($data);
+        if ($data['logo'] ?? '') {
+            $imagePath = $data['logo']->store('uploads', 'public');
+            $data['logo'] = $imagePath;
+        }
         $data['regDate'] = date("Y-m-d");
+        //dd($data);
         Organization::create($data);
-        // dd($data);
-        //return \App\Organization::create($data);
         return redirect(route('home'));
     }
 }

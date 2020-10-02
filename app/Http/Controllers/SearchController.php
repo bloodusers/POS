@@ -14,10 +14,7 @@ class SearchController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
-    {
-        return view('search.search');
-    }
+
 
     public function getItemWithId($id)
     {

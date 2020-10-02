@@ -85,7 +85,7 @@
                                     {{ __('Delete') }}
                                 </button>
                                 <form id="{{$item->id}}" method="post"
-                                      action="{{route('Category.destroy',[$item->id])}}"
+                                      action="{{route('item.destroy',[$item->id])}}"
                                       style="display: none">
                                     @csrf
                                     <input type="hidden" name="_method" value="delete">

@@ -187,15 +187,15 @@
 
             }
         });
-       /* $("#search").autocomplete({
+       /* $("#invoice").autocomplete({
             //source: "/?searchText=" + $("#ItemSearch").val(),
             minLength: 2,
             autoFocus: true,
             source: function (request, response) {
                 $.ajax({
                     type: 'get',
-                    url: '{{URL::to('search')}}',
-                    data: {'search': $value},
+                    url: '{{URL::to('invoice')}}',
+                    data: {'invoice': $value},
                     success: function (data) {
                         response($.map(data, function (item) {
                             return {
@@ -210,7 +210,7 @@
 
             select: function (event, ui) {
                 addToTable(ui.item.id);
-                $("#search").val('');
+                $("#invoice").val('');
                 return false;
                 //log( "Selected: " + ui.item.value + " aka " + ui.item.id );
             }

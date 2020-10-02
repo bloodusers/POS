@@ -41,6 +41,11 @@ class ItemController extends Controller
             ->paginate(10))]), 'canEdit', redirect(back()));
     }
 
+    public function delete($id)
+    {
+
+    }
+
     public function update($id)
     {
         //dd($id);
@@ -80,7 +85,6 @@ class ItemController extends Controller
             ]
         );
         $imagePath = $data['image']->store('uploads', 'public');
-        //dd($imagePath.' Path');
         $data['image'] = $imagePath;
         //dd($data);
         Item::create($data);

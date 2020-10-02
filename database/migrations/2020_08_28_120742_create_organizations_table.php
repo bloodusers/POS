@@ -20,6 +20,7 @@ class CreateOrganizationsTable extends Migration
             $table->string('contactPerson');
             $table->string('contact')->unique();
             $table->string('email')->unique();
+            $table->string('logo')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->date('regDate');
             $table->boolean('isActive')->default(false);
