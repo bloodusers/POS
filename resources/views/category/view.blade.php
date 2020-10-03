@@ -9,8 +9,9 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse btn-group-vertical" id="navbarNav">
         <ul class="navbar-nav">
+
             <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
@@ -57,22 +58,23 @@
         @endforeach
     </div>
     <!--new-->
-    <script>
-        var dropdown = document.getElementsByClassName("dropdown-btn");
-        var i;
 
-        for (i = 0; i < dropdown.length; i++) {
-            dropdown[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var dropdownContent = this.nextElementSibling;
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                } else {
-                    dropdownContent.style.display = "block";
-                }
-            });
-        }
-    </script>
 
 @endsection
 
+<script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+</script>

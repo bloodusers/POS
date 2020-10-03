@@ -22,26 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="default theme">
-      <change afterPath="$PROJECT_DIR$/resources/views/invoice/receipt.blade.php" afterDir="false" />
+    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="invoice receipt done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InvoiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InvoiceController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ItemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ItemController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrganizationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrganizationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Organization.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Organization.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_28_120742_create_organizations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_28_120742_create_organizations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/jquery-ui-1.12.1/external/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/external/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/jquery-ui-1.12.1/jquery-ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/jquery-ui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/jquery-ui-1.12.1/jquery-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/jquery-ui-1.12.1/jquery-ui.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/jquery-ui-1.12.1/external/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/jquery-ui-1.12.1/external/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/jquery-ui-1.12.1/jquery-ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/jquery-ui-1.12.1/jquery-ui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/jquery-ui-1.12.1/jquery-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/jquery-ui-1.12.1/jquery-ui.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/item/editList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/item/editList.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/organization/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/organization/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/search/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/invoice/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/category/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category/view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/invoice/receipt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/invoice/receipt.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -253,7 +238,8 @@
       <workItem from="1601159731178" duration="63200000" />
       <workItem from="1601537403912" duration="747000" />
       <workItem from="1601634141173" duration="1389000" />
-      <workItem from="1601639880562" duration="17672000" />
+      <workItem from="1601639880562" duration="17937000" />
+      <workItem from="1601726707891" duration="3020000" />
     </task>
     <task id="LOCAL-00001" summary="lel">
       <created>1598268273226</created>
@@ -514,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601482628609</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="invoice receipt done">
+      <created>1601667325274</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1601667325274</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,7 +551,8 @@
     <MESSAGE value="invoice index done&amp;&amp; status switch using ajax done" />
     <MESSAGE value="invoice record adding in data base done" />
     <MESSAGE value="default theme" />
-    <option name="LAST_COMMIT_MESSAGE" value="default theme" />
+    <MESSAGE value="invoice receipt done" />
+    <option name="LAST_COMMIT_MESSAGE" value="invoice receipt done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1850" y="201" key="#Web_Browsers" timestamp="1598454354742">
@@ -598,10 +592,10 @@
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1898" y="325" key="VCS.ChangelistChooser/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601664550125" />
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601482629603">
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601667328183">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601482629603" />
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601667328183" />
     <state x="1866" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601667072421">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
@@ -619,10 +613,10 @@
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1705" y="187" key="run.anything.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601660700051" />
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1601662156871">
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1601736007615">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="359" y="181" width="672" height="802" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@0.0.1280.984" timestamp="1600153609940" />
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601662156871" />
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601736007615" />
   </component>
 </project>

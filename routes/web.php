@@ -62,7 +62,7 @@ Route::post('/regCategory', 'CategoryController@create')->name('/regCategory');
 //item
 Route::get('/addItem', 'ItemController@index')->name('item.add');
 Route::post('/regItem', 'ItemController@create')->name('item.register');
-Route::get('/editItem', 'ItemController@editList')->name('editCategory');//show listing
+Route::get('/editItem', 'ItemController@editList')->name('editItem');//show listing
 Route::post('/item/{id}/edit', 'ItemController@edit')->name('item.edit');//edit form
 Route::patch('/item/{id}', 'ItemController@update')->name('Cat.update');//update from edit
 Route::delete('/item/{id}/delete', 'ItemController@delete')->name('item.destroy');//delete category

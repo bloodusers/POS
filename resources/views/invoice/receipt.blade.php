@@ -7,7 +7,7 @@
                     <table class="container-fluid p-400">
                         <thead>
                         <tr>
-                            <td><img src="/storage/{{(\Illuminate\Support\Facades\Auth::user()->organization->logo)}} "
+                            <td><img src="/storage/{{(\App\User::find($data[0]->user_id)->organization->logo)}} "
                                      height="70px" width="70px"/></td>
                             <td><h3 class="text-right">
                                     Sale Invoice

@@ -43,7 +43,14 @@ class ItemController extends Controller
 
     public function delete($id)
     {
-
+        //$temp=Item::all()->count();
+        $name=Item::find($id)->name;
+        if(Item::find($id)->delete()) {
+            DB::select(DB::raw("ALTER TABLE items AUTO_INCREMENT =" . 0));
+            return redirect()->route('editItem')->with('success','item '.$name.' deleted successfully');
+        }
+        return redirect()->route('item.edit')->withErrors('error','ERROR');
+        // return redirect(route('editCategory'));
     }
 
     public function update($id)
