@@ -10,9 +10,9 @@
             <div class="card">
                 <h2>
                     @if($info ?? '')
-                        <div class="card-header">{{ __('Edit Item') }}</div>
+                        <div class="card-header text-center">{{ __('Edit Item') }}</div>
                     @else
-                        <div class="card-header">{{ __('Add Item') }}</div>
+                        <div class="card-header text-center">{{ __('Add Item') }}</div>
                     @endif
                 </h2>
 
@@ -88,39 +88,43 @@
                             </div>
                         </div>
                         <!--img-->
-                        <div class="d-inline">
-                            <strong><label class="d-inline" for="image"
-                                           class="col-md-4 col-form-label text-md-right">{{ __('Add an Image') }}</label></strong>
-                            <input class="d-inline" type="file" accept="image/*"
-                                   @if($info??'')
-                                   value="/storage/{{($info->image??'')}}"
-                                   @endif
-                                   class="form-control-file" id="image" name="image">
-                            @error('image')
-                            <span class="invalid-feedback" role="alert">
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <strong><label class="d-inline" for="image"
+                                               class="col-md-4 col-form-label text-md-right">{{ __('Add an Image') }}</label></strong>
+                                <input class="d-inline" type="file" accept="image/*"
+                                       @if($info??'')
+                                       value="/storage/{{($info->image??'')}}"
+                                       @endif
+                                       class="form-control-file" id="image" name="image">
+                                @error('image')
+                                <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                             @enderror
-                        </div>
-                        <!--dropDown-->
+                            <!--dropDown-->
 
-                        <label for="category_id" style="margin-top: 20px">Select category:</label>
-                        <select id="category_id" name="category_id">
-                            <option value="">NONE</option>
-                            @foreach($data as $cat)
-                                @foreach($cat->children as $subCat)
-                                    @foreach($subCat->children as$gChild)
-                                        <option value={{$gChild->id}}
-                                        @if($info??'')
-                                        @if($gChild->id==$info->category_id)
-                                            selected='selected'
-                                            @endif
-                                            @endif>----{{ucfirst($gChild->name)}}</option>
+                                <label for="category_id" style="margin-top: 20px">Select category:</label>
+                                <select id="category_id" name="category_id">
+                                    <option value="">NONE</option>
+                                    @foreach($data as $cat)
+                                        @foreach($cat->children as $subCat)
+                                            @foreach($subCat->children as$gChild)
+                                                <option value={{$gChild->id}}
+                                                @if($info??'')
+                                                @if($gChild->id==$info->category_id)
+                                                    selected='selected'
+                                                    @endif
+                                                    @endif>----{{ucfirst($gChild->name)}}</option>
+                                            @endforeach
+                                        @endforeach
                                     @endforeach
-                                @endforeach
-                            @endforeach
-                        </select>
+                                </select>
+                            </div>
+                        </div>
                         <!--new-->
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary justify-content-center">
                                     @if($info->id ?? '')
                                         {{ __('edit item') }}
@@ -128,8 +132,11 @@
                                         {{ __('add item') }}
                                     @endif
                                 </button>
+                            </div>
+                        </div>
+
+                    </form>
                 </div>
-                </form>
             </div>
         </div>
     </div>

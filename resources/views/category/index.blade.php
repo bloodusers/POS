@@ -2,7 +2,7 @@
 
 @section('content')
 </br>
-</br>a
+</br>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -45,38 +45,45 @@
                         </div>
                         <!--description-->
                         <!--new-->
-                        <div class="justify-content-center">
-                            <label for="category_id">Select parent category:</label>
-                            <select id="category_id" name="category_id">
-                                <option value="">NONE</option>
-                                @foreach($data as $cat)
-                                    <option value={{$cat->id}}
-                                    @if($info??'')
-                                    @if($cat->id==$info->category_id??'')
-                                        selected='selected'
-                                        @endif
-                                        @endif>{{ucfirst($cat->name)}}</option>
-                                    @foreach($cat->children as $subCat)
-                                        <option value={{$subCat->id}}
-                                        @if($info??'')
-                                        @if($subCat->id==$info->category_id)
-                                            selected='selected'
-                                            @endif
-                                            @endif>--{{ucfirst($subCat->name)}}</option>
-                                    @endforeach
-                                @endforeach
-                            </select>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-2 offset-md-4">
+                                <div class="justify-content-center">
+                                    <label for="category_id">Select parent category:</label>
+                                    <select id="category_id" name="category_id">
+                                        <option value="">NONE</option>
+                                        @foreach($data as $cat)
+                                            <option value={{$cat->id}}
+                                            @if($info??'')
+                                            @if($cat->id==$info->category_id??'')
+                                                selected='selected'
+                                                @endif
+                                                @endif>{{ucfirst($cat->name)}}</option>
+                                            @foreach($cat->children as $subCat)
+                                                <option value={{$subCat->id}}
+                                                @if($info??'')
+                                                @if($subCat->id==$info->category_id)
+                                                    selected='selected'
+                                                    @endif
+                                                    @endif>--{{ucfirst($subCat->name)}}</option>
+                                            @endforeach
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
                         </div>
 
                         <!--new-->
-                                <button type="submit" class="btn btn-primary justify-content-center" >
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary justify-content-center">
                                     @if($info->id ?? '')
                                         {{ __('edit category') }}
                                     @else
                                         {{ __('add category') }}
                                     @endif
                                 </button>
-
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
