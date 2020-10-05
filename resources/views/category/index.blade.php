@@ -10,9 +10,9 @@
                 <div class="card-header">
                     <h2>
                         @if($info ?? '')
-                            <div class="card-header">{{ __('Edit category') }}</div>
+                            <div class="card-header text-center">{{ __('Edit category') }}</div>
                         @else
-                            <div class="card-header">{{ __('Add category') }}</div>
+                            <div class="card-header text-center">{{ __('Add category') }}</div>
                         @endif
                     </h2>
                 </div>
@@ -46,7 +46,7 @@
                         <!--description-->
                         <!--new-->
                         <div class="form-group row mb-0">
-                            <div class="col-md-2 offset-md-4">
+                            <div class="col-md-6 offset-md-4">
                                 <div class="justify-content-center">
                                     <label for="category_id">Select parent category:</label>
                                     <select id="category_id" name="category_id">
@@ -77,9 +77,9 @@
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary justify-content-center">
                                     @if($info->id ?? '')
-                                        {{ __('edit category') }}
+                                        {{ __('Edit Category') }}
                                     @else
-                                        {{ __('add category') }}
+                                        {{ __('Add Category') }}
                                     @endif
                                 </button>
                             </div>

@@ -22,11 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="invoice receipt done">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="style Done">
       <change beforePath="$PROJECT_DIR$/resources/views/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/item/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/item/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +236,7 @@
       <workItem from="1601634141173" duration="1389000" />
       <workItem from="1601639880562" duration="17937000" />
       <workItem from="1601726707891" duration="3787000" />
-      <workItem from="1601767758073" duration="1795000" />
+      <workItem from="1601767758073" duration="1915000" />
     </task>
     <task id="LOCAL-00001" summary="lel">
       <created>1598268273226</created>
@@ -514,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601744395970</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="style Done">
+      <created>1601921256346</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1601921256346</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +538,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="lel" />
     <MESSAGE value="startAdminPage" />
     <MESSAGE value="adminPage+isActive&#10;done" />
     <MESSAGE value="Emp+Role Start" />
@@ -559,7 +562,8 @@
     <MESSAGE value="invoice record adding in data base done" />
     <MESSAGE value="default theme" />
     <MESSAGE value="invoice receipt done" />
-    <option name="LAST_COMMIT_MESSAGE" value="invoice receipt done" />
+    <MESSAGE value="style Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="style Done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1850" y="201" key="#Web_Browsers" timestamp="1598454354742">
@@ -599,10 +603,10 @@
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1898" y="325" key="VCS.ChangelistChooser/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601664550125" />
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601744397929">
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601921258036">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601744397929" />
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601921258036" />
     <state x="1866" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601667072421">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
