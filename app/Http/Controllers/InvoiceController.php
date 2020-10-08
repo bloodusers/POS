@@ -9,6 +9,7 @@ use App\Organization;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use mysql_xdevapi\Warning;
 
 class InvoiceController extends Controller
 {
@@ -16,16 +17,19 @@ class InvoiceController extends Controller
     {
         $this->middleware('auth');
     }
+
     public function index()
     {
         return view('invoice.index');
     }
+
     public function receipt($id)
     {
-        $uOrgIds=getFeild('id','users','organization_id ='.Auth::user()->organization_id);
-        return view('invoice.receipt', ['data' => Invoice::with('invoiceItems')->where('id',$id)->
-        whereIn('user_id',$uOrgIds)->get()]);
+        $uOrgIds = getFeild('id', 'users', 'organization_id =' . Auth::user()->organization_id);
+        return view('invoice.receipt', ['data' => Invoice::with('invoiceItems')->where('id', $id)->
+        whereIn('user_id', $uOrgIds)->get()]);
     }
+
     public function create()
     {
         $data = \request()->validate(
@@ -40,24 +44,10 @@ class InvoiceController extends Controller
         );
         $data['user_id'] = Auth::user()->id;
         return Invoice::create($data)->id;
-        return $data;
     }
-    /* public function create()
+
+    public function find($id)
     {
-        $data = \request()->validate(
-            [
-                'name' => 'required',
-                'shortName' => 'required',
-                'contactPerson' => 'required',
-                'contact' => 'required|min:11|numeric',
-                'email' => 'required|email:rfc,dns',
-            ]
-        );
-        //date("Y-m-d")
-        $data['regDate'] = date("Y-m-d");
-        Organization::create($data);
-        // dd($data);
-        //return \App\Organization::create($data);
-        return redirect(route('home'));
-    }*/
+            return Invoice::find($id);
+    }
 }

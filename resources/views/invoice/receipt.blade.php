@@ -45,13 +45,15 @@
                         </thead>
                         <tbody class="">
                         @for($i=0;$i<sizeof($data[0]->invoiceItems);$i++)
+                            @if($data[0]->invoiceItems[$i]->qty-$data[0]->invoiceItems[$i]->returnQty)
                             <tr>
                                 <td>{{$i+1}}</td>
                                 <td>{{\App\Item::find($data[0]->invoiceItems[$i]->item_id)->name}}</td>
                                 <td>{{$data[0]->invoiceItems[$i]->price}}</td>
-                                <td>{{$data[0]->invoiceItems[$i]->qty}}</td>
+                                <td>{{$data[0]->invoiceItems[$i]->qty-$data[0]->invoiceItems[$i]->returnQty}}</td>
                                 <td>{{$data[0]->invoiceItems[$i]->price*$data[0]->invoiceItems[$i]->qty}}</td>
                             </tr>
+                            @endif
                         @endfor
                         </tbody>
                     </table>

@@ -98,6 +98,7 @@
     </nav>
 
     <main class="py-4">
+        <input type='hidden' name='tName' id='tName' value='{{csrf_token()}}'>
         @yield('appContent')
     </main>
 </div>

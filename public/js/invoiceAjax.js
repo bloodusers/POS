@@ -96,13 +96,17 @@ function ReCalculateSerialNumbers() {
         Sr++;
     });
 }
-
-function addInvoice($userId) {
-    console.log($('#tName').val());
+function getCSRF()
+{
+    return $('#tName').val();
+}
+function addInvoice(tag) {
+   // console.log($('#tName').val());
     let token = $('#tName').val();
     var table = document.getElementById("invoiceList").getElementsByTagName('tbody')[0];
     var row = table.rows.length;
-
+    tag.disabled = true;
+    tag.innerText = "Adding Invoice";
     console.log(data);
     for (let i = 1; i <= row; i++) {
         console.log(document.getElementById("invoiceList").rows[i].cells[1].innerHTML);
@@ -125,9 +129,6 @@ function addInvoice($userId) {
                 let id=response;
                 $("#ItemTableBody .DataRow").each(function ()
                 {
-                    /*console.log(($(this).find(".id").text()));
-                    console.log(parseInt($(this).find(".Qty").val()));
-                    console.log((parseInt($(this).find(".Price").text())));*/
                     $.ajax({
                         headers: {
                             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -139,41 +140,19 @@ function addInvoice($userId) {
                             "item_id": ($(this).find(".id").text()),
                             "qty": parseInt($(this).find(".Qty").val()),
                             "price": (parseInt($(this).find(".Price").text())),
-                            "returnQty": parseInt(1),
+                            "returnQty": 0,
                         },
                         success: function (response) {
                             if (response) {
-                                console.log('done');
-                                console.log(response);
-                                location.reload(true);
+                               //
                             }
                         }
                         ,
                     });
                 })
+                window.location.replace("/invoice/"+id+"/receipt");
             }
         }
         ,
     });
 }
-
-/*
-var data = '[' +
-    '{"customerName":"' + $('#customerName').val() + '"}' +
-    '{"remarks":"' + $('#remarks').val() + '"}' +
-    '{"total":"' + $('#total').val() + '"}' +
-    '{"totalItems":"' + row + '"}' +
-    '{"discount":"' + $('#discount').val() + '"}' +
-    '{"payableAmount":"' + $('#subTotal').val() + '"}' +
-    ']';*/
-
-/*
-var data = {
-        "customerName" :$('#customerName').val(),
-    "remarks" : $('#remarks').val() ,
-    "total" : $('#total').val() ,
-    "totalItems" : row ,
-    "discount" : $('#discount').val() ,
-    "payableAmount" : $('#subTotal').val() ,
-    };
-*/

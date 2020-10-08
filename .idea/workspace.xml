@@ -23,7 +23,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="style Done">
-      <change beforePath="$PROJECT_DIR$/resources/views/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ReturnController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ReturnItemController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ReturnInvoice.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ReturnInvoiceItem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_06_132502_create_return_invoices_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_06_132634_create_return_invoice_items_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/returnInvoice/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/returnInvoice/view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InvoiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InvoiceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InvoiceItemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InvoiceItemController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_28_131804_create_invoice_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_28_131804_create_invoice_items_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/invoiceAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/invoiceAjax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/invoice/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/invoice/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/invoice/receipt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/invoice/receipt.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,23 +175,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/returnInvoice" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\POS\resources\views\organization" />
-      <recent name="C:\xampp\htdocs\POS\resources\views\orgnization" />
-      <recent name="C:\xampp\htdocs\POS\resources\views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\POS\resources\views\returnInvoice" />
       <recent name="C:\xampp\htdocs\POS\public" />
       <recent name="C:\xampp\htdocs\POS\resources\views\layouts" />
       <recent name="C:\xampp\htdocs\POS\public\images" />
       <recent name="C:\xampp\htdocs\POS\resources\views" />
-      <recent name="C:\xampp\htdocs\POS\resources\views\item" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\POS\resources\views\organization" />
+      <recent name="C:\xampp\htdocs\POS\resources\views\orgnization" />
+      <recent name="C:\xampp\htdocs\POS\resources\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -236,7 +253,10 @@
       <workItem from="1601634141173" duration="1389000" />
       <workItem from="1601639880562" duration="17937000" />
       <workItem from="1601726707891" duration="3787000" />
-      <workItem from="1601767758073" duration="1915000" />
+      <workItem from="1601767758073" duration="2031000" />
+      <workItem from="1601976848413" duration="1223000" />
+      <workItem from="1601990097885" duration="31739000" />
+      <workItem from="1602176239086" duration="11162000" />
     </task>
     <task id="LOCAL-00001" summary="lel">
       <created>1598268273226</created>
@@ -518,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601921256346</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="style Done">
+      <created>1601921464973</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1601921464973</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,15 +597,19 @@
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1850" y="201" key="#Web_Browsers/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598454354742" />
+    <state x="1798" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601997042561">
+      <screen x="1280" y="0" width="1536" height="832" />
+    </state>
+    <state x="1798" y="214" key="#com.intellij.fileTypes.FileTypeChooser/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601997042561" />
     <state x="1778" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597934752829">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1778" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1597934752829" />
-    <state x="1779" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601642757481">
+    <state x="1779" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602182810612">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="416" y="198" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1280.0.1536.832/0.0.1280.984@0.0.1280.984" timestamp="1598616487569" />
-    <state x="1779" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601642757481" />
+    <state x="1779" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1602182810612" />
     <state x="1829" y="167" key="FileChooserDialogImpl" timestamp="1598454335060">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
@@ -603,10 +634,10 @@
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1898" y="325" key="VCS.ChangelistChooser/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601664550125" />
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601921258036">
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601921471619">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601921258036" />
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601921471619" />
     <state x="1866" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601667072421">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
@@ -615,19 +646,19 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="-3" y="-15" width="1296" height="555" maximized="true" key="dock-window-1/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1598621911359" />
-    <state x="1759" y="11" width="578" height="801" key="find.popup" timestamp="1601461831347">
+    <state x="1759" y="11" width="578" height="801" key="find.popup" timestamp="1602182796210">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="399" y="13" width="555" height="948" key="find.popup/1280.0.1536.832/0.0.1280.984@0.0.1280.984" timestamp="1599557695583" />
-    <state x="1759" y="11" width="578" height="801" key="find.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601461831347" />
+    <state x="1759" y="11" width="578" height="801" key="find.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1602182796210" />
     <state x="1705" y="187" key="run.anything.popup" timestamp="1601660700051">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1705" y="187" key="run.anything.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601660700051" />
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1601736007615">
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup" timestamp="1602192735218">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="359" y="181" width="672" height="802" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@0.0.1280.984" timestamp="1600153609940" />
-    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601736007615" />
+    <state x="1711" y="153" width="672" height="678" key="search.everywhere.popup/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1602192735218" />
   </component>
 </project>

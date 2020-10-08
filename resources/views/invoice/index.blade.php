@@ -41,13 +41,13 @@
                     <!--Quantity-->
                     <td class="text-center w-set vertical_align : top">
                         <div class="form-inline">
-                            <button class="qty-button" title="Deduct Qty"
+                            <button class="btn btn-outline-danger" title="Deduct Qty"
                                     onclick="ChangeQty(this,'Subtract');">
                                 -
                             </button>
                             <input type="text" class="Qty form-control" size="1"
                                    onchange="CalculateLineTotal(this);" value="1" readonly/>
-                            <button class="qty-button" title="Add Qty" onclick="ChangeQty(this,'Add');">+
+                            <button class="btn btn-outline-success" title="Add Qty" onclick="ChangeQty(this,'Add');">+
                             </button>
                         </div>
                     </td>
@@ -148,7 +148,7 @@
                 </div>
                 <form>
                     @csrf
-                    <button type="button" class="btn btn-primary justify-content-end" onclick="addInvoice({{Auth::user()->id}})">Create
+                    <button type="button" class="btn btn-primary justify-content-end" onclick="addInvoice(this)">Create
                         Invoice
                     </button>
                 </form>
@@ -187,34 +187,6 @@
 
             }
         });
-       /* $("#invoice").autocomplete({
-            //source: "/?searchText=" + $("#ItemSearch").val(),
-            minLength: 2,
-            autoFocus: true,
-            source: function (request, response) {
-                $.ajax({
-                    type: 'get',
-                    url: '{{URL::to('invoice')}}',
-                    data: {'invoice': $value},
-                    success: function (data) {
-                        response($.map(data, function (item) {
-                            return {
-                                label: item.name,
-                                value: item.id,
-                                ItemPrice: item.price
-                            };
-                        }));
-                    },
-                });
-            },
-
-            select: function (event, ui) {
-                addToTable(ui.item.id);
-                $("#invoice").val('');
-                return false;
-                //log( "Selected: " + ui.item.value + " aka " + ui.item.id );
-            }
-        });*/
     }
 </script>
 

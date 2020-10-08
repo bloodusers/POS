@@ -68,21 +68,17 @@ class CategoryController extends Controller
     public function delete($id)
     {
 
-        //dd($id);
         $temp=Category::all()->count();
         $name=Category::find($id)->name;
-        //dd($temp);
         if(Category::find($id)->delete()) {
             DB::select(DB::raw("ALTER TABLE categories AUTO_INCREMENT =" . 0));
             return redirect()->route('category.edit')->with('success','Category '.$name.' deleted successfully');
         }
         return redirect()->route('category.edit')->withErrors('error','ERROR');
-       // return redirect(route('editCategory'));
     }
 
     public function create()//regCategory
     {
-        //dd(\request());
         $data = \request()->validate(
             [
                 'name' => 'required',
