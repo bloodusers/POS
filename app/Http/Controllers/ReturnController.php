@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Invoice;
 use App\ReturnInvoice;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReturnController extends Controller
 {
@@ -28,6 +29,7 @@ class ReturnController extends Controller
                 'payableAmount' => 'required',
             ]
         );
+        $data['user_id']=Auth::user()->id;
         return ReturnInvoice::create($data)->invoice_id;
     }
 }

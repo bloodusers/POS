@@ -22,25 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="style Done">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ReturnController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ReturnItemController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ReturnInvoice.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ReturnInvoiceItem.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_06_132502_create_return_invoices_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_06_132634_create_return_invoice_items_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/returnInvoice/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/returnInvoice/view.blade.php" afterDir="false" />
+    <list default="true" id="429384c6-ecb5-470b-b242-d0bf89564648" name="Default Changelist" comment="returnInvoice">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InvoiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InvoiceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InvoiceItemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InvoiceItemController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_28_131804_create_invoice_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_28_131804_create_invoice_items_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/invoiceAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/invoiceAjax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/invoice/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/invoice/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/invoice/receipt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/invoice/receipt.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReturnController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReturnController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_06_132502_create_return_invoices_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_06_132502_create_return_invoices_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +241,12 @@
       <workItem from="1601767758073" duration="2031000" />
       <workItem from="1601976848413" duration="1223000" />
       <workItem from="1601990097885" duration="31739000" />
-      <workItem from="1602176239086" duration="11162000" />
+      <workItem from="1602176239086" duration="11255000" />
+      <workItem from="1602199039345" duration="478000" />
+      <workItem from="1602200764187" duration="430000" />
+      <workItem from="1602235527191" duration="2380000" />
+      <workItem from="1602248236990" duration="726000" />
+      <workItem from="1602413126040" duration="1201000" />
     </task>
     <task id="LOCAL-00001" summary="lel">
       <created>1598268273226</created>
@@ -545,7 +535,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601921464973</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="returnInvoice">
+      <created>1602192931015</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1602192931015</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +562,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="startAdminPage" />
     <MESSAGE value="adminPage+isActive&#10;done" />
     <MESSAGE value="Emp+Role Start" />
     <MESSAGE value="relations +Privileges done relations +Privileges done" />
@@ -590,7 +586,8 @@
     <MESSAGE value="default theme" />
     <MESSAGE value="invoice receipt done" />
     <MESSAGE value="style Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="style Done" />
+    <MESSAGE value="returnInvoice" />
+    <option name="LAST_COMMIT_MESSAGE" value="returnInvoice" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1850" y="201" key="#Web_Browsers" timestamp="1598454354742">
@@ -634,10 +631,10 @@
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
     <state x="1898" y="325" key="VCS.ChangelistChooser/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601664550125" />
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601921471619">
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2" timestamp="1602192932905">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>
-    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1601921471619" />
+    <state x="1641" y="145" key="Vcs.Push.Dialog.v2/1280.0.1536.832/0.0.1280.984@1280.0.1536.832" timestamp="1602192932905" />
     <state x="1866" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601667072421">
       <screen x="1280" y="0" width="1536" height="832" />
     </state>

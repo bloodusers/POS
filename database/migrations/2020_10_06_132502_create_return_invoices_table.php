@@ -22,11 +22,13 @@ class CreateReturnInvoicesTable extends Migration
         Schema::create('return_invoices', function (Blueprint $table) {
             $table->id();//pk
             $table->unsignedBigInteger('invoice_id');
+            $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('totalAmount');
             $table->unsignedBigInteger('discount');
             $table->unsignedBigInteger('payableAmount');
             $table->string('remarks')->nullable();
             $table->index('invoice_id');//fk
+            $table->index('user_id');//fk
             $table->timestamps();
         });
     }
